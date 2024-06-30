@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiyaHero | Home </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>BiyaHero</h1>
+            <a href="./test">
+                <img id="home-icon" src="./assets/home.svg" alt="home icon">
+            </a>
+        </nav>
+
+        <section>
+            <div id="banner">
+                <br><br>
+                <h1>Welcome to BiyaHero!</h1><br><br><br>
+                <p>Your Friendly Guide on Commuting in Manila</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div id="sidebar">
+            <br><br>
+            <h2>What To Do?</h2>
+            <ol>
+                <li>Pick an origin station by clicking the drop-down list beside <strong>"Origin"</strong></li>
+                <li>Pick a destination station by clicking the drop-down list beside <strong>"Destination"</strong></li>
+                <li>Pick a type of ride by clicking the drop-down list beside <strong>"Type of Ride"</strong></li>
+                <li>Click <strong>"Submit"</strong> button once done</li>
+                <li>Click <strong>"Reset"</strong> button if you want to start again.</li>
+            </ol>
+        </div>
+
+        <div id="user-select">
+            <h2>Select the correct stations and type of ride:</h2><br>
+            <form id="input">
+                <label for="origin">Origin:</label>
+
+                <div class="station-select">
+                    <select name="origin" id="origin-select">
+                    
+                    </select> <br><br>
+                </div>
+                <label for="destination">Destination:</label>
+                <div class="station-select">
+                    <select name="destination" id="destination-select">
+                    
+                    </select><br><br>
+                </div>
+                <label for="type">Type of Ride:</label>
+                <div class="station-select">
+                    <select name="type" id="type-select">
+                        <option value="single">Single Journey Ticket</option>
+                        <option value="beep">BEEP Card</option>
+                        <option value="discount">Discount</option>
+                    </select>
+                </div>
+                <br><br>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit" id="home-submit">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+

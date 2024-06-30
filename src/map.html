@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiyaHero | Map</title>
+</head>
+<body>
+    <header>
+        <h1>BiyaHero</h1>
+        <a href="./">
+            <img id="home-icon" src="./assets/home.svg" alt="home icon">
+        </a>
+    </header>
+
+    <main>
+        <div id="sidebar">
+           <form id="input">
+            <div class="station-select">   
+                <label for="origin">
+                    <img id="origin-pin" src="./assets/pin-origin.svg" alt="pin">
+                    FROM
+                </label>
+                <select name="origin" id="origin-select">
+                 
+                </select>
+            </div>
+
+            <div class="station-select">   
+                <label for="destination">
+                    <img id="destination-pin" src="./assets/pin-destination.svg" alt="pin">
+                    TO
+                </label>
+                <select name="destination" id="destination-select">
+                  
+                </select>
+            </div>
+
+            <div class="type-select">
+                <label for="type">TYPE</label>
+                <select name="type" id="type-select">
+                    <option value="single">Single Journey Ticket</option>
+                    <option value="beep">BEEP Card</option>
+                    <option value="discount">Discount</option>
+                </select>
+            </div>
+
+            <button class="routes-btn" id="map-submit">Get Routes</button>
+           </form>
+
+           <div id="output">
+                <div class="output-header">
+                    <h3>ROUTES</h3>
+                    <div class="sort-options">
+                        <label for="sort">SORT BY:</label>
+                        <select name="sort" id="sort">
+                            <option value="test1">Price</option>
+                            <option value="test2">Transfers</option>
+                            <option value="test3">Time</option>
+                        </select>
+                        <button><img src="./assets/sort-swap.svg" alt="asc/desc"></button>
+                    </div>
+                </div>
+
+           </div>
+        </div>
+        <div id="map">
+            <p id="testresult">Insert Map</p>
+        </div>
+
+    </main> 
+    
+</body>
+</html>
