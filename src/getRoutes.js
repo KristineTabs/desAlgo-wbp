@@ -17,30 +17,30 @@ function computeTravelTime (station, currTravelTime, subPathDistance) {
 }
 
 //computes fair based on the corresponding line system of the path in fareMatrix json file 
-function computeFair (firstFair, secondFair, originStation, destinationStation, currTotalFare, isDiscounted, typeOfRide) {
+function computeFair (firstFair, secondFair, originStation, destinationStation, currTotalFare, discounted, journeyType) {
     
     switch (fareMatrix[destinationStation]['systemLine']) {
 
         case 'LRT 1':
         case 'LRT 2':
-            if (typeOfRide === 'single') {
-                isDiscounted? currTotalFare += Math.ceil(firstFair - firstFair * 0.20) : currTotalFare += firstFair;
-            }
-            else if (typeOfRide === 'beep'){
+            if (journeyType === 'beep'){
                 currTotalFare += Math.ceil(secondFair);
+            }
+            else {
+                discounted? currTotalFare += Math.ceil(firstFair - firstFair * 0.20) : currTotalFare += firstFair;
             }
             break;
 
         case 'MRT 3':
-            isDiscounted? currTotalFare += Math.ceil(firstFair - firstFair * 0.20) : currTotalFare += firstFair;
+            discounted? currTotalFare += Math.ceil(firstFair - firstFair * 0.20) : currTotalFare += firstFair;
             break;
         
         case 'EDSA Carousel':
             if (fareMatrix[originStation]['stopOrder'] < fareMatrix[destinationStation]['stopOrder']) {
-                isDiscounted? currTotalFare += Math.ceil(firstFair - firstFair * 0.20) : currTotalFare += Math.ceil(firstFair);
+                discounted? currTotalFare += Math.ceil(firstFair - firstFair * 0.20) : currTotalFare += Math.ceil(firstFair);
             }
             else {
-                isDiscounted? currTotalFare += Math.ceil(secondFair - secondFair * 0.20) : currTotalFare += Math.ceil(secondFair);
+                discounted? currTotalFare += Math.ceil(secondFair - secondFair * 0.20) : currTotalFare += Math.ceil(secondFair);
             }
             break;
     }
@@ -129,7 +129,7 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
     };
 
     //executes dfs algorithm to find all possible paths from origin station to destination station 
-    function implementDFS(currStation, destination, route, visited, allRoutes, finalTotalDistance, subPathDistance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, typeOfRide, isDiscounted) {
+    function implementDFS(currStation, destination, route, visited, allRoutes, finalTotalDistance, subPathDistance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, rideType, isDiscounted) {
        
         route.push(currStation); //places the current visited station in the current route
         visited.add(currStation);
@@ -156,14 +156,14 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
                 firstFair = fareMatrix[firstStation][prevStation][0];
                 secondFair = fareMatrix[firstStation][prevStation][1];
 
-                currTotalFare = computeFair(firstFair, secondFair, firstStation, prevStation, currTotalFare, isDiscounted, typeOfRide);
+                currTotalFare = computeFair(firstFair, secondFair, firstStation, prevStation, currTotalFare, isDiscounted, rideType);
             }
             else if (fareMatrix[firstStation][prevStation] === undefined) {
 
                 firstFair = fareMatrix[prevStation][firstStation][0];
                 secondFair = fareMatrix[prevStation][firstStation][1];
 
-                currTotalFare = computeFair(firstFair, secondFair, firstStation, prevStation, currTotalFare, isDiscounted);
+                currTotalFare = computeFair(firstFair, secondFair, firstStation, prevStation, currTotalFare, isDiscounted, rideType);
             }
 
             firstStation = currStation; //sets the current station as the first station of a new subpath
@@ -185,14 +185,14 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
                     firstFair = fareMatrix[firstStation][currStation][0];
                     secondFair = fareMatrix[firstStation][currStation][1];
 
-                    currTotalFare = computeFair(firstFair, secondFair, firstStation, currStation, currTotalFare, isDiscounted);
+                    currTotalFare = computeFair(firstFair, secondFair, firstStation, currStation, currTotalFare, isDiscounted, rideType);
                 }
                 else if (fareMatrix[firstStation][currStation] === undefined) {
 
                     firstFair = fareMatrix[currStation][firstStation][0];
                     secondFair = fareMatrix[currStation][firstStation][1];
 
-                    currTotalFare = computeFair(firstFair, secondFair, firstStation, currStation, currTotalFare, isDiscounted);
+                    currTotalFare = computeFair(firstFair, secondFair, firstStation, currStation, currTotalFare, isDiscounted, rideType);
                 }
             }
             
@@ -203,8 +203,7 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
                 finalTotalDistance: finalTotalDistance.toFixed(2),
                 finalTravelTime: Math.ceil(currTravelTime), 
                 finalTotalFair: currTotalFare,
-                numStations: route.length - 1,
-                numSystemTransfer: routeTransfer
+                numStations: route.length - 1
             });
 
         } 
@@ -213,7 +212,7 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
             for (const [adjacentStation, distance, travelTime] of graph[currStation]) { //checks unvisited adjacent stations from the current station
 
                 if (!visited.has(adjacentStation)) { //if the adjacent station is not yet visited, we visit deeper into the path
-                    implementDFS(adjacentStation, destination, route, visited, allRoutes, finalTotalDistance + distance, subPathDistance + distance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, typeOfRide, isDiscounted);
+                    implementDFS(adjacentStation, destination, route, visited, allRoutes, finalTotalDistance + distance, subPathDistance + distance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, rideType, isDiscounted);
                 }
             }
         }
