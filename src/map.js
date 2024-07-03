@@ -42,6 +42,40 @@ originSelect.value = originInput;
 destinationSelect.value = destInput; 
 typeSelect.value = typeInput; 
 
+//initialize map
+var map = L.map('map').setView([14.5793, 121.0008], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+let markers = [];
+
+//function to mark stations
+function plotRoute(route){
+    //remove previous markers
+    markers.forEach((marker) => {
+        map.removeLayer(marker); 
+    })
+    markers = []; 
+    route = route.route;
+    route.forEach((station, i) => {
+      for(let obj in stationData){
+        if(obj == station){
+            const x = stationData[obj].coordinates[0];
+            const y = stationData[obj].coordinates[1];
+            var marker = L.marker([x,y]).addTo(map);
+            markers.push(marker);
+            if(i == 0){
+                marker.bindPopup("Origin").openPopup()
+            } else if(i == route.length - 1) {
+                marker.bindPopup("Destination").openPopup()
+            }
+        }
+      }
+    })
+}
+
 //get result 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
 const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
@@ -51,7 +85,7 @@ const routeOutput = document.querySelector('#output');
 
 routes.forEach((route, i) => {
     console.log(route); 
-    createRouteNode(route, i)
+    createRouteNode(route, i); 
 })
 
 function createRouteNode(route, index){
@@ -98,9 +132,7 @@ function createRouteNode(route, index){
     routeOutput.appendChild(nodeBtn); 
 
     nodeBtn.addEventListener('click', () => {
-        const testResult = document.querySelector('#testresult'); 
-        testResult.textContent = route.route; 
-        map.appendChild(testResult);
+        plotRoute(route);
     })
 }
 

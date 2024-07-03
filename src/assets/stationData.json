@@ -1,7 +1,7 @@
 {
     "Fernando Poe Jr./Roosevelt": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.657889653738007, 121.02115581016683],
         "Balintawak (LRT1)": [20, 16],
         "Yamaha Monumento": [20, 18],
         "5th Avenue": [20, 20],
@@ -25,7 +25,7 @@
 
     "Balintawak (LRT1)": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.657608947306406, 121.00408004763605],
         "Yamaha Monumento": [20, 16],
         "5th Avenue": [20, 17],
         "R. Papa": [20, 18],
@@ -48,7 +48,7 @@
 
     "Yamaha Monumento": {
         "systemLine": "LRT 1",
-        
+        "coordinates": [14.65434814510447, 120.98385177612144],
         "5th Avenue": [15, 15],
         "R. Papa": [20, 16],
         "Abad Santos": [20, 17],
@@ -70,7 +70,7 @@
 
     "5th Avenue": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.644498520777908, 120.98360345334932],
         "R. Papa": [15, 14],
         "Abad Santos": [15, 15],
         "Blumentritt": [20, 16],
@@ -91,7 +91,7 @@
 
     "R. Papa": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.63622899004198, 120.98237343825811],
         "Abad Santos": [15, 14],
         "Blumentritt": [15, 15],
         "Tayuman": [20, 16],
@@ -111,7 +111,7 @@
 
     "Abad Santos": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.630644818864509, 120.98142359867933],
         "Blumentritt": [15, 14],
         "Tayuman": [15, 15],
         "Bambang": [20, 16],
@@ -130,7 +130,7 @@
 
     "Blumentritt": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.622659032495866, 120.98291828552298],
         "Tayuman": [15, 14],
         "Bambang": [15, 15],
         "Doroteo Jose": [20, 16],
@@ -148,7 +148,7 @@
 
     "Tayuman": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.616550215597185, 120.98267814038542],
         "Bambang": [15, 14],
         "Doroteo Jose": [15, 15],
         "Carriedo": [20, 16],
@@ -165,7 +165,7 @@
 
     "Bambang": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.611175199216355, 120.98248034301396],
         "Doroteo Jose": [15, 14],
         "Carriedo": [15, 15],
         "Central Terminal": [20, 16],
@@ -181,7 +181,7 @@
 
     "Doroteo Jose": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.605452627231452, 120.98203801067285],
         "Carriedo": [15, 14],
         "Central Terminal": [15, 15],
         "United Nations": [20, 16],
@@ -196,7 +196,7 @@
 
     "Carriedo": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.599142207751923, 120.98134864376813],
         "Central Terminal": [15, 14],
         "United Nations": [20, 16],
         "Pedro Gil": [20, 17],
@@ -210,7 +210,7 @@
 
     "Central Terminal": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.592749859504242, 120.9816313693701],
         "United Nations": [15, 15],
         "Pedro Gil": [20, 16],
         "Quirino": [20, 17],
@@ -223,7 +223,7 @@
 
     "United Nations": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.582549125416763, 120.98462309302388],
         "Pedro Gil": [15, 14],
         "Quirino": [15, 15],
         "Vito Cruz": [20, 16],
@@ -235,7 +235,7 @@
 
     "Pedro Gil": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.576539263153432, 120.98806689908079],
         "Quirino": [15, 14],
         "Vito Cruz": [15, 15],
         "Gil Puyat": [20, 17],
@@ -246,7 +246,7 @@
 
     "Quirino": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.570305114899911, 120.99156127465545],
         "Vito Cruz": [15, 14],
         "Gil Puyat": [20, 16],
         "Libertad": [20, 16],
@@ -256,7 +256,7 @@
 
     "Vito Cruz": {
         "systemLine": "LRT 1",
-        
+        "coordinates":  [14.56331711798168, 120.9948436330176],
         "Gil Puyat": [15, 15],
         "Libertad": [15, 15],
         "EDSA": [20, 17],
@@ -265,7 +265,7 @@
 
     "Gil Puyat": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.554247302688283, 120.9971708954906],
         "Libertad": [15, 14],
         "EDSA": [15, 15],
         "Baclaran": [20, 16]
@@ -273,19 +273,20 @@
 
     "Libertad": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.547749274771201, 120.99861619675356],
         "EDSA": [15, 15],
         "Baclaran": [15, 15]
     },
 
     "EDSA": {
         "systemLine": "LRT 1",
-
+        "coordinates": [14.539016300030438, 121.00062593987309],
         "Baclaran": [15, 14]
     },
 
     "Baclaran": {
-        "systemLine": "LRT 1"
+        "systemLine": "LRT 1",
+        "coordinates": [14.534233171778432, 120.99835008753472]
     },
 
 
@@ -296,7 +297,7 @@
 
     "Recto": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.603632328150782, 120.98362373662468],
         "Legarda": [15, 15],
         "Pureza": [20, 16],
         "V. Mapa": [20, 18],
@@ -313,7 +314,7 @@
 
     "Legarda": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.601182056217423, 120.99284394641161],
         "Pureza": [15, 15],
         "V. Mapa": [20, 17],
         "J. Ruiz": [20, 18],
@@ -329,7 +330,7 @@
 
     "Pureza": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.602026608087174, 121.00521028318215],
         "V. Mapa": [15, 15],
         "J. Ruiz": [20, 16],
         "Gilmore": [20, 18],
@@ -344,7 +345,7 @@
 
     "V. Mapa": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.604346800947562, 121.01724242736267],
         "J. Ruiz": [15, 15],
         "Gilmore": [20, 16],
         "Betty Go-Belmonte": [20, 17],
@@ -358,7 +359,7 @@
 
     "J. Ruiz": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.610743760554152, 121.02620680115118],
         "Gilmore": [15, 14],
         "Betty Go-Belmonte": [20, 16],
         "Araneta Center-Cubao (LRT2)": [20, 17],
@@ -371,7 +372,7 @@
 
     "Gilmore": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.613636613059708, 121.03425951953966],
         "Betty Go-Belmonte": [15, 15],
         "Araneta Center-Cubao (LRT2)": [20, 16],
         "Anonas": [20, 18],
@@ -383,7 +384,7 @@
 
     "Betty Go-Belmonte": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.618585653895234, 121.04273844361174],
         "Araneta Center-Cubao (LRT2)": [15, 15],
         "Anonas": [20, 16],
         "Katipunan": [20, 18],
@@ -394,7 +395,7 @@
 
     "Araneta Center-Cubao (LRT2)": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.622943030827326, 121.05273108133014],
         "Anonas": [15, 15],
         "Katipunan": [20, 16],
         "Santolan (LRT2)": [20, 19],
@@ -404,7 +405,7 @@
 
     "Anonas": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.62809923095422, 121.06471053073669],
         "Katipunan": [15, 14],
         "Santolan (LRT2)": [20, 17],
         "Marikina-Pasig": [20, 19],
@@ -413,7 +414,7 @@
 
     "Katipunan": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.631325085134357, 121.07242679482229],
         "Santolan (LRT2)": [20, 16],
         "Marikina-Pasig": [20, 18],
         "Antipolo": [25, 21]
@@ -421,19 +422,20 @@
 
     "Santolan (LRT2)": {
         "systemLine": "LRT 2",
-
+        "coordinates": [14.622328535836113, 121.0867371871186],
         "Marikina-Pasig": [15, 15],
         "Antipolo": [20, 18]
     },
 
     "Marikina-Pasig": {
         "systemLine": "LRT 2",
-
+        "coordinates":  [14.620526945376305, 121.10027702959293],
         "Antipolo": [20, 16]
     },
 
     "Antipolo": {
-        "systemLine": "LRT 2"
+        "systemLine": "LRT 2",
+        "coordinates": [14.625032724161391, 121.12140100749482]
     },
 
 
@@ -444,7 +446,7 @@
 
     "North Avenue (MRT3)": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.652195973329915, 121.03235849656674],
         "Quezon Avenue (MRT3)": [13],
         "GMA Kamuning": [13],
         "Araneta Center-Cubao (MRT3)": [16],
@@ -461,7 +463,7 @@
 
     "Quezon Avenue (MRT3)": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.642789503087306, 121.03852449406058],
         "GMA Kamuning": [13],
         "Araneta Center-Cubao (MRT3)": [13],
         "Santolan-Annapolis": [16],
@@ -477,7 +479,7 @@
 
     "GMA Kamuning": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.635241704751078, 121.0433724531299],
         "Araneta Center-Cubao (MRT3)": [13],
         "Santolan-Annapolis": [13],
         "Ortigas (MRT3)": [16],
@@ -492,7 +494,7 @@
 
     "Araneta Center-Cubao (MRT3)": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.619488774800352, 121.05117017831017],
         "Santolan-Annapolis": [13],
         "Ortigas (MRT3)": [13],
         "Shaw Boulevard": [16],
@@ -506,7 +508,7 @@
 
     "Santolan-Annapolis": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.607813830405192, 121.05643608979177],
         "Ortigas (MRT3)": [13],
         "Shaw Boulevard": [13],
         "Boni": [16],
@@ -519,7 +521,7 @@
 
     "Ortigas (MRT3)": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.587878487608144, 121.05669057622023],
         "Shaw Boulevard": [13],
         "Boni": [13],
         "Guadalupe (MRT3)": [16],
@@ -531,7 +533,7 @@
 
     "Shaw Boulevard": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.581222446822242, 121.05360411261334],
         "Boni": [13],
         "Guadalupe (MRT3)": [13],
         "Buendia (MRT3)": [16],
@@ -542,7 +544,7 @@
 
     "Boni": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.573794186884063, 121.04818243148969],
         "Guadalupe (MRT3)": [13],
         "Buendia (MRT3)": [13],
         "Ayala (MRT3)": [16],
@@ -552,7 +554,7 @@
 
     "Guadalupe (MRT3)": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.56670826426437, 121.04547443487894],
         "Buendia (MRT3)": [13],
         "Ayala (MRT3)": [13],
         "Magallanes": [16],
@@ -561,7 +563,7 @@
 
     "Buendia (MRT3)": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.55460059364354, 121.03451642310628],
         "Ayala (MRT3)": [13],
         "Magallanes": [13],
         "Taft Avenue (MRT3)": [16]
@@ -569,19 +571,20 @@
 
     "Ayala (MRT3)": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.549204298303684, 121.02797161482445],
         "Magallanes": [13],
         "Taft Avenue (MRT3)": [13]
     },
 
     "Magallanes": {
         "systemLine": "MRT 3",
-
+        "coordinates": [14.541871735109892, 121.01932352876085],
         "Taft Avenue (MRT3)": [13]
     },
 
     "Taft Avenue (MRT3)": {
-        "systemLine": "MRT 3"
+        "systemLine": "MRT 3",
+        "coordinates": [14.53767103081072, 121.00218199433715]
     },
 
 
@@ -593,7 +596,7 @@
     "Monumento (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 1,
-
+        "coordinates": [14.65723676234265, 120.98625174871243],
         "Bagong Barrio": [15, 15],
         "Balintawak (Carousel)": [15, 15],
         "Kaingin Road": [15, 15],
@@ -619,7 +622,7 @@
     "Bagong Barrio": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 2,
-   
+        "coordinates": [14.658129054215442, 120.99835180966367],
         "Balintawak (Carousel)": [15, 15],
         "Kaingin Road": [15, 15],
         "Roosevelt": [15, 15],
@@ -644,7 +647,7 @@
     "Balintawak (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 3,
-  
+        "coordinates": [14.65797863075305, 121.00498334498165],
         "Kaingin Road": [15, 15],
         "Roosevelt": [15, 15],
         "North Avenue (Carousel)": [15, 15],
@@ -668,7 +671,7 @@
     "Kaingin Road": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 4,
-
+        "coordinates": [14.658310779329534, 121.01159230799453],
         "Roosevelt": [15, 15],
         "North Avenue (Carousel)": [15, 15],
         "Quezon Avenue (Carousel)": [15, 15],
@@ -691,7 +694,7 @@
     "Roosevelt": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 5,
-
+        "coordinates": [14.658518371934086, 121.01978913874424],
         "North Avenue (Carousel)": [15, 15],
         "Quezon Avenue (Carousel)": [15, 15],
         "Nepa Q-Mart": [15, 15],
@@ -713,7 +716,7 @@
     "North Avenue (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 6,
-
+        "coordinates": [14.652041389865037, 121.03300706476966],
         "Quezon Avenue (Carousel)": [15, 15],
         "Nepa Q-Mart": [15, 15],
         "Main Avenue": [15, 15],
@@ -734,7 +737,7 @@
     "Quezon Avenue (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 7,
-
+        "coordinates": [14.64236707931128, 121.03935853571684],
         "Nepa Q-Mart": [15, 15],
         "Main Avenue": [15, 15],
         "Santolan (Carousel)": [15, 15],
@@ -754,7 +757,7 @@
     "Nepa Q-Mart": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 8,
-
+        "coordinates": [14.629785685548354, 121.04686872095873],
         "Main Avenue": [15, 15],
         "Santolan (Carousel)": [15, 15],
         "Ortigas (Carousel)": [15, 15],
@@ -773,7 +776,7 @@
     "Main Avenue": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 9,
-     
+        "coordinates": [14.614919610563721, 121.05382100672523],
         "Santolan (Carousel)": [15, 15],
         "Ortigas (Carousel)": [15, 15],
         "Guadalupe (Carousel)": [15, 16.75],
@@ -791,7 +794,7 @@
     "Santolan (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 10,
- 
+        "coordinates": [14.609687177382643, 121.05626718134691],
         "Ortigas (Carousel)": [15, 15],
         "Guadalupe (Carousel)": [15, 15],
         "Buendia (Carousel)": [15, 20],
@@ -808,7 +811,7 @@
     "Ortigas (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 11,
-
+        "coordinates": [14.58784249985451, 121.05652467341231],
         "Guadalupe (Carousel)": [15, 15],
         "Buendia (Carousel)": [15, 15],
         "Ayala (Carousel)": [15, 15.50],
@@ -824,7 +827,7 @@
     "Guadalupe (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 12,
-
+        "coordinates": [14.56911083151502, 121.04605332941813],
         "Buendia (Carousel)": [15, 15],
         "Ayala (Carousel)": [15, 15],
         "Tramo": [15],
@@ -839,7 +842,7 @@
     "Buendia (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 13,
-      
+        "coordinates": [14.55540372407569, 121.03747026057057],
         "Ayala (Carousel)": [15, 15],
         "Tramo": [15],
         "Taft Avenue (Carousel)": [15, 15],
@@ -853,7 +856,7 @@
     "Ayala (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 14,
-
+        "coordinates": [14.550005605268618, 121.0284335904759],
         "Tramo": [15],
         "Taft Avenue (Carousel)": [15, 15],
         "Roxas Boulevard": [15, 15],
@@ -866,7 +869,7 @@
     "Tramo": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 15,
-
+        "coordinates": [14.538089383394048, 121.00344233535586],
         "Taft Avenue (Carousel)": [15],
         "Roxas Boulevard": [15],
         "MOA": [15],
@@ -878,7 +881,7 @@
     "Taft Avenue (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 16,
-    
+        "coordinates": [14.537832076974514, 120.99970759960841],
         "Roxas Boulevard": [15, 15],
         "MOA": [15],
         "DFA/Starbucks": [15, 15],
@@ -889,7 +892,7 @@
     "Roxas Boulevard": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 17,
-
+        "coordinates": [14.537333516287445, 120.99225912380115],
         "MOA": [15],
         "DFA/Starbucks": [15, 15],
         "Ayala Malls Manila Bay/City of Dreams": [15, 15],
@@ -899,7 +902,7 @@
     "MOA": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 18,
-
+        "coordinates": [14.535609551646576, 120.98373967321723],
         "DFA/Starbucks": [15],
         "Ayala Malls Manila Bay/City of Dreams": [15],
         "PITX": [15]
@@ -908,7 +911,7 @@
     "DFA/Starbucks": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 19,
-
+        "coordinates": [14.53024315251824, 120.98962687486458],
         "Ayala Malls Manila Bay/City of Dreams": [15, 15],
         "PITX": [15, 15]
     },
@@ -916,13 +919,14 @@
     "Ayala Malls Manila Bay/City of Dreams": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 20,
-        
+        "coordinates":[14.524149419075057, 120.9907232345767] ,
         "PITX": [15, 15]
     },
     
     "PITX": {
         "systemLine": "EDSA Carousel",
-        "stopOrder": 21
+        "stopOrder": 21,
+        "coordinates": [14.507962038454975, 120.99126580235031]
     }
 
 }
