@@ -33,9 +33,9 @@ function getURLParams(name){
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-const originInput = getURLParams('origin'); 
-const destInput = getURLParams('destination'); 
-const typeInput = getURLParams('type');
+let originInput = getURLParams('origin'); 
+let destInput = getURLParams('destination'); 
+let typeInput = getURLParams('type');
 
 //set current parameters to form data 
 originSelect.value = originInput;
