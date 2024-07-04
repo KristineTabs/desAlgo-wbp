@@ -7,6 +7,7 @@ import findAllRoutes from './getRoutes';
 const originSelect = document.querySelector('#origin-select');
 const destinationSelect = document.querySelector('#destination-select');
 const typeSelect = document.querySelector('#type-select');
+const sortSelect = document.querySelector('#sort-select');
 
 Object.keys(stationData).forEach((key) => {
     const originNode = document.createElement('option'); 
@@ -36,11 +37,18 @@ function getURLParams(name){
 let originInput = getURLParams('origin'); 
 let destInput = getURLParams('destination'); 
 let typeInput = getURLParams('type');
+let sortInput = getURLParams('sort');
+
+//to set price as default value for first load
+if (!sortInput) {
+    sortInput = 'price';
+}
 
 //set current parameters to form data 
 originSelect.value = originInput;
 destinationSelect.value = destInput; 
 typeSelect.value = typeInput; 
+sortSelect.value = sortInput;
 
 //initialize map
 var map = L.map('map').setView([14.5793, 121.0008], 13);
@@ -78,7 +86,7 @@ function plotRoute(route){
 
 //get result 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
-const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
+const routes = findAllRoutes(originInput, destInput, typeInput, sortInput, discountBool); 
 
 //display results 
 const routeOutput = document.querySelector('#output'); 
@@ -137,14 +145,24 @@ function createRouteNode(route, index){
 }
 
 //get routes button 
-const submitBtn = document.querySelector('#map-submit')
+const submitBtn = document.querySelector('#map-submit');
 submitBtn.addEventListener('click', () => {
     originInput = document.querySelector('#origin-select').value; 
     destInput = document.querySelector('#destination-select').value; 
     typeInput = document.querySelector('#type-select').value; 
+    sortInput = document.querySelector('#sort-select').value;
 
-    const url = (window.location.href).hostname + `map.html?origin=${encodeURIComponent(originInput)}&destination=${encodeURIComponent(destInput)}&type=${encodeURIComponent(typeInput)}`;
+    const url = (window.location.href).hostname + `map.html?origin=${encodeURIComponent(originInput)}&destination=${encodeURIComponent(destInput)}&type=${encodeURIComponent(typeInput)}&sort=${encodeURIComponent(sortInput)}`;
     window.location.href = url; 
 })
 
 
+// reloads when the sort by value changes
+const sortSelected = document.querySelector('#sort-select');
+sortSelected.addEventListener('change', () => {
+    
+    sortInput = sortSelected.options[sortSelected.selectedIndex].value;
+
+    const url = window.location.origin + `/map.html?origin=${encodeURIComponent(originInput)}&destination=${encodeURIComponent(destInput)}&type=${encodeURIComponent(typeInput)}&sort=${encodeURIComponent(sortInput)}`;
+    window.location.href = url;
+});
