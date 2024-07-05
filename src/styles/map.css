@@ -27,10 +27,58 @@ header{
     height: 3em;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    #home-icon {
+        height: 2.3em;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #home-icon {
+        height: 2em;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    #home-icon {
+        height: 2.2em;
+    }
+}
+
 main{
     height: 100%; 
     display: grid; 
     grid-template-columns: 0.25fr 0.75fr;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    main {
+        grid-template-columns: 0.35fr 0.65fr;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    main {
+        grid-template-columns: 0.4fr 0.6fr;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    main {
+        grid-template-columns: 0.4fr 0.6fr;
+    }
 }
 
 #sidebar{
@@ -94,6 +142,46 @@ main{
     filter: brightness(0) saturate(100%) invert(24%) sepia(35%) saturate(4057%) hue-rotate(342deg) brightness(86%) contrast(117%);
 }
 
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    .station-select select{
+        font-size: 10px;
+    }
+
+    .type-select {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .type-select select {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    #origin-pin, #destination-pin {
+        height: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    .station-select select{
+        font-size: 10px;
+    }
+
+    .type-select {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .type-select select {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    #origin-pin, #destination-pin {
+        height: 1.5em;
+    }
+}
+
 .routes-btn{
     background: transparent;
     border-radius: 1em; 
@@ -109,6 +197,26 @@ main{
     color: white;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .routes-btn {
+        font-size: 0.8em;
+        height: 20px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    .routes-btn {
+        font-size: 0.7em;
+        height: 20px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    .routes-btn {
+        font-size: 0.7em;
+        height: 20px;
+    }
+}
 
 /* results sidebar */
 
@@ -128,6 +236,24 @@ main{
     box-sizing: border-box;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .output-header h3 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    .output-header h3 {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    .output-header h3 {
+        font-size: 13px;
+    }
+}
+
 .sort-options{
     display: flex;
     align-items: center;
@@ -135,13 +261,43 @@ main{
 }
 
 .sort-options label, .sort-options select{
-    font-size: 0.25em;
+    font-size: 0.7em;
     border: none;
 }
 
 .sort-options button{
     background: transparent;
     border: none;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .sort-options label, .sort-options select {
+        font-size: 0.7em;
+    }
+
+    .sort-options button {
+        height: 1.7em;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    .sort-options label, .sort-options select {
+        font-size: 0.6em;
+    }
+
+    .sort-options button {
+        height: 1em;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    .sort-options label, .sort-options select {
+        font-size: 0.5em;
+    }
+
+    .sort-options button {
+        height: 0.4em;
+    }
 }
 
 .route-result{
@@ -179,6 +335,23 @@ main{
     font-weight: bold;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .route-result {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    .route-result {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    .route-result {
+        font-size: 10px;
+    }
+}
 
 /* scrollbar */
 
