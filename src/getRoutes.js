@@ -48,35 +48,7 @@ function computeFair (firstFair, secondFair, originStation, destinationStation, 
     return currTotalFare;
 }
 
-function sortRoutes (routes, sortChoice) {
-    let sortBasis;
-
-    switch(sortChoice) {
-        case 'price':
-            sortBasis = 'finalTotalFair';
-            break;
-        case 'transfers':
-            sortBasis = 'numStations';
-            break;
-        case 'time':
-            sortBasis = 'finalTravelTime';
-            break;
-    }
-        
-    for (let i = 0; i < routes.length - 1; i++) {
-        for (let j = 0; j < routes.length - 1 - i; j++) {
-            if (routes[j][sortBasis] > routes[j + 1][sortBasis]) {
-                let temp = routes[j];
-                routes[j] = routes[j + 1];
-                routes[j + 1] = temp;
-            }
-        }
-    }
-
-    return routes;
-}
-
-function findAllRoutes(origin, destination, typeOfRide, sortType, discount) {
+function findAllRoutes(origin, destination, typeOfRide, discount) {
 
     const graph = {
         //LRT 1
@@ -253,8 +225,6 @@ function findAllRoutes(origin, destination, typeOfRide, sortType, discount) {
     let prevStation = origin;
 
     implementDFS(origin, destination, [], new Set(), allRoutes, 0, 0, 0, 0, 0, firstStation, prevStation, typeOfRide, discount);
-
-    allRoutes = sortRoutes(allRoutes, sortType);
     
     return allRoutes;
 }

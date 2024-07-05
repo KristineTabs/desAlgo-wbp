@@ -86,7 +86,20 @@ function plotRoute(route){
 
 //get result 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
-const routes = findAllRoutes(originInput, destInput, typeInput, sortInput, discountBool); 
+const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
+
+const sortFields = {
+    'price': 'finalTotalFair',
+    'transfers': 'numStations',
+    'time': 'finalTravelTime'
+} 
+
+//sort the routes before display
+routes.sort((path1, path2) => {
+
+    let sortBasis = sortFields[sortInput];
+    return path1[sortBasis] < path2[sortBasis]? -1 : path1[sortBasis] > path2[sortBasis]? 1 : 0;  
+});
 
 //display results 
 const routeOutput = document.querySelector('#output'); 
@@ -154,7 +167,7 @@ submitBtn.addEventListener('click', () => {
 
     const url = (window.location.href).hostname + `map.html?origin=${encodeURIComponent(originInput)}&destination=${encodeURIComponent(destInput)}&type=${encodeURIComponent(typeInput)}&sort=${encodeURIComponent(sortInput)}`;
     window.location.href = url; 
-})
+});
 
 
 // reloads when the sort by value changes
