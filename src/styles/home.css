@@ -22,8 +22,44 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    nav {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    nav {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    nav {
+        padding: 0 10px;
+    }
+}
+
 #home-icon{
     height: 3em;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    #home-icon {
+        height: 2.7em;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    #home-icon {
+        height: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    #home-icon {
+        height: 2em;
+    }
 }
 
 main{
@@ -57,6 +93,49 @@ section p {
     margin-top: -20px;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    section {
+        padding: 0 20px;
+        padding-top: 0px;
+    }
+
+    section h1 {
+        font-size: 55px;
+    }
+
+    section p {
+        margin-top: -25px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    section {
+        padding: 0 10px;
+        padding-top: 0px;
+    }
+
+    section p {
+        margin-top: -33px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    section {
+        padding: 0 10px;
+        padding-top: 0px;
+    }
+
+    section h1 {
+        font-size: 35px;
+    }
+
+    section p {
+        font-size: 16px;
+        margin-top: -28px;
+    }
+}
+
 #sidebar h2, li {
     margin-left: 20px;
     margin-right: 20px;
@@ -67,12 +146,65 @@ section p {
     font-size: 19px;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    #sidebar {
+        padding: 0 10px;
+    }
+
+    #sidebar h2 {
+        font-size: 28px;
+        line-height: 1.5;
+    }
+
+    #sidebar li {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    #sidebar {
+        padding: 0 3px;
+        margin-top: -15px;
+    }
+
+    #sidebar h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    #sidebar li {
+        font-size: 12px;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    #sidebar {
+        padding: 0 3px;
+        margin-top: -15px;
+    }
+
+    #sidebar h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    #sidebar li {
+        font-size: 10.5px;
+        margin-left: 0px;
+        margin-right: 5px;
+    }
+}
+
 #user-select {
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 35px;
 }
 
@@ -80,15 +212,157 @@ section p {
     line-height: 1.6;
 }
 
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    #user-select {
+        padding: 0 10px;
+        margin-right: 20px;
+    }
+
+    #user-select h2 {
+        font-size: 28px;
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    #user-select {
+        padding: 0 3px;
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+
+    #user-select h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    #user-select {
+        padding: 0 3px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    #user-select h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+}
+
 #input {
     font-size: 19px;
-    margin-left: 30px;
+}
+
+#input select {
+    font-size: 15px;
+}
+
+#input input {
+    background: transparent;
+    border: 1px solid #0e3e7c ; 
+    width: 80px;
+    height: 23px;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+#input input:hover {
+    background: #0e3e7c;
+    border-color: white;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    #input {
+        padding: 0 10px;
+        margin-left: 0px;
+    }
+
+    #input label {
+        font-size: 23px;
+    }
+
+    #input select {
+        font-size: 18px;
+    }
+    
+    #input input {
+        font-size: 20px;
+        width: 80px;
+        height: 30px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    #input {
+        padding: 0 3px;
+        margin-left: 0px;
+    }
+
+    #input label {
+        font-size: 16px;
+    }
+
+    #input select {
+        font-size: 12px;
+    }
+    
+    #input input {
+        font-size: 14px;
+        width: 60px;
+        height: 18px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    #input {
+        padding: 0 3px;
+        margin-left: 0px;
+    }
+
+    #input label {
+        font-size: 16px;
+    }
+
+    #input select {
+        font-size: 11px;
+    }  
+
+    #input input {
+        font-size: 13px;
+        width: 60px;
+        height: 18px;
+    }
 }
 
 .station-select {
     position: relative;
 }
 
-.station-select option {
-    font-size: 18px;
+.station-select select {
+    cursor: pointer;
+}
+
+.station-select select option {
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .station-select select option {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    .station-select select option {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 400px) {
+    .station-select select option {
+        font-size: 11px;
+    }
 }
