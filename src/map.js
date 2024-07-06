@@ -23,7 +23,7 @@ Object.keys(stationData).forEach((key) => {
     
     destinationSelect.appendChild(destNode); 
     originSelect.appendChild(originNode); 
-})
+});
 
 //decode URL parameters
 
@@ -64,7 +64,7 @@ function plotRoute(route){
     //remove previous markers
     markers.forEach((marker) => {
         map.removeLayer(marker); 
-    })
+    });
     markers = []; 
     route = route.route;
     route.forEach((station, i) => {
@@ -81,33 +81,17 @@ function plotRoute(route){
             }
         }
       }
-    })
+    });
 }
 
 //get result 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
 const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
 
-const sortFields = {
-    'price': 'finalTotalFair',
-    'transfers': 'numStations',
-    'time': 'finalTravelTime'
-} 
-
-//sort the routes before display
-routes.sort((path1, path2) => {
-
-    let sortBasis = sortFields[sortInput];
-    return path1[sortBasis] < path2[sortBasis]? -1 : path1[sortBasis] > path2[sortBasis]? 1 : 0;  
-});
-
 //display results 
 const routeOutput = document.querySelector('#output'); 
+displayRoutes (routes, sortInput);
 
-routes.forEach((route, i) => {
-    console.log(route); 
-    createRouteNode(route, i); 
-})
 
 function createRouteNode(route, index){
     const distance = route.finalTotalDistance;
@@ -120,7 +104,7 @@ function createRouteNode(route, index){
     nodeBtn.id = `route-${index}`;
 
     const routeName = document.createElement('p'); 
-    routeName.textContent = `Route ${index} : ${distance} km`;
+    distance == 0 ? routeName.textContent = `Route ${index} : Walking Distance`: routeName.textContent = `Route ${index} : ${distance} km`;
     routeName.className = 'route-name';
     nodeBtn.appendChild(routeName);
 
@@ -154,7 +138,7 @@ function createRouteNode(route, index){
 
     nodeBtn.addEventListener('click', () => {
         plotRoute(route);
-    })
+    });
 }
 
 //get routes button 
@@ -170,12 +154,44 @@ submitBtn.addEventListener('click', () => {
 });
 
 
-// reloads when the sort by value changes
+//sort options
 const sortSelected = document.querySelector('#sort-select');
 sortSelected.addEventListener('change', () => {
     
-    sortInput = sortSelected.options[sortSelected.selectedIndex].value;
+    // nodesArr.forEach((child) => {
+    //     output.removeChild(child);
+    // });
 
-    const url = window.location.origin + `/map.html?origin=${encodeURIComponent(originInput)}&destination=${encodeURIComponent(destInput)}&type=${encodeURIComponent(typeInput)}&sort=${encodeURIComponent(sortInput)}`;
-    window.location.href = url;
+    //remove previous route nodes
+    const output = document.getElementById("output");
+    const nodesArr = Array.from(output.children);
+
+    for (let node = 1; node < nodesArr.length; node++) {
+        output.removeChild(nodesArr[node]);
+    }
+
+    sortInput = sortSelected.options[sortSelected.selectedIndex].value;
+    displayRoutes (routes, sortInput);
+
 });
+
+//sorts and displays paths
+function displayRoutes (paths, sortType) {
+    
+    const sortFields = {
+        'price': 'finalTotalFair',
+        'transfers': 'numStations',
+        'time': 'finalTravelTime'
+    } 
+    
+    paths.sort((path1, path2) => {
+    
+        let sortBasis = sortFields[sortType];
+        return path1[sortBasis] < path2[sortBasis]? -1 : path1[sortBasis] > path2[sortBasis]? 1 : 0;  
+    });
+
+    paths.forEach((route, i) => {
+        console.log(route); 
+        createRouteNode(route, i); 
+    });
+} 

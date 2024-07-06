@@ -6,11 +6,11 @@ const fareMatrix = stationData;
 //computes travel time of a sub path depending on the speed of the vehicle in the system
 function computeTravelTime (station, currTravelTime, subPathDistance) {
 
-    if (['LRT 1', 'LRT 2', 'MRT 3'].includes(fareMatrix[station]['systemLine'])) {
-        currTravelTime += (subPathDistance / 60) * 60;
+    if (fareMatrix[station]['systemLine'] === 'EDSA Carousel') {
+        currTravelTime += (subPathDistance / 21) * 60;
     }
     else {
-        currTravelTime += (subPathDistance / 21) * 60;
+        currTravelTime += (subPathDistance / 60) * 60;
     }
 
     return currTravelTime;
@@ -150,14 +150,14 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
                 }
             }
 
-            if (fareMatrix[firstStation][prevStation] !== undefined) { //checks if the fare data from origin to destination exist. if not, it swaps the stations. 
+            if (fareMatrix[firstStation][prevStation]) { //checks if the fare data from origin to destination exist. if not, it swaps the stations. 
 
                 firstFair = fareMatrix[firstStation][prevStation][0];
                 secondFair = fareMatrix[firstStation][prevStation][1];
 
                 currTotalFare = computeFair(firstFair, secondFair, firstStation, prevStation, currTotalFare, isDiscounted, rideType);
             }
-            else if (fareMatrix[firstStation][prevStation] === undefined) {
+            else if (fareMatrix[prevStation][firstStation]) {
 
                 firstFair = fareMatrix[prevStation][firstStation][0];
                 secondFair = fareMatrix[prevStation][firstStation][1];
@@ -179,14 +179,14 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
 
                 subPathDistance = 0;
 
-                if (fareMatrix[firstStation][currStation] !== undefined) {
+                if (fareMatrix[firstStation][currStation]) {
 
                     firstFair = fareMatrix[firstStation][currStation][0];
                     secondFair = fareMatrix[firstStation][currStation][1];
 
                     currTotalFare = computeFair(firstFair, secondFair, firstStation, currStation, currTotalFare, isDiscounted, rideType);
                 }
-                else if (fareMatrix[firstStation][currStation] === undefined) {
+                else if (fareMatrix[currStation][firstStation]) {
 
                     firstFair = fareMatrix[currStation][firstStation][0];
                     secondFair = fareMatrix[currStation][firstStation][1];
