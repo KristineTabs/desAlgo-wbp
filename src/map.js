@@ -1,4 +1,7 @@
 import * as css from './styles/map.css'
+import homePinImg from './assets/pin-map-origin.svg'
+import destPinImg from './assets/pin-map-dest.svg'
+import defPinImg from './assets/pin-map-stop.svg'
 
 import stationData from './assets/stationData.json';
 import findAllRoutes from './getRoutes';
@@ -58,27 +61,87 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 let markers = [];
+let polylines = [];
 
 //function to mark stations
 function plotRoute(route){
     //remove previous markers
-    markers.forEach((marker) => {
+    let previousMarker = null; 
+    markers.forEach((marker, i) => {
         map.removeLayer(marker); 
     });
+
+    polylines.forEach((polyline) => {
+        map.removeLayer(polyline)
+    });
+
     markers = []; 
+    polylines = [];
     route = route.route;
+
+    //custom map pin icons
+    let homeIcon = L.icon({
+        iconUrl: homePinImg,
+        iconSize: [25, 45], 
+        iconAnchor: [15, 35], 
+        popupAnchor: [1, -34]
+    });
+
+    let destIcon = L.icon({
+        iconUrl: destPinImg,
+        iconSize: [25, 45], 
+        iconAnchor: [15, 35], 
+        popupAnchor: [1, -34]
+    })
+
+    let defIcon = L.icon({
+        iconUrl: defPinImg,
+        iconSize: [15, 25], 
+        popupAnchor: [1, -10]
+    })
+
     route.forEach((station, i) => {
       for(let obj in stationData){
         if(obj == station){
             const x = stationData[obj].coordinates[0];
             const y = stationData[obj].coordinates[1];
-            var marker = L.marker([x,y]).addTo(map);
-            markers.push(marker);
+            let marker;
             if(i == 0){
-                marker.bindPopup("Origin").openPopup()
+                marker = L.marker([x,y], {icon: homeIcon}).addTo(map).bindPopup(`Origin: ${station}`, {closeOnClick: false, autoClose: false});
             } else if(i == route.length - 1) {
-                marker.bindPopup("Destination").openPopup()
+                marker =  L.marker([x,y], {icon: destIcon}).addTo(map).bindPopup(`Destination: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
+            } else {
+                marker = L.marker([x,y], {icon: defIcon}).addTo(map).bindPopup(`${station}`, {closeOnClick: false, autoClose: false}); 
+            };
+
+            //enable hover with click
+            let clickState = false; 
+            marker.on('mouseover', function(e) {
+                if(!clickState) this.openPopup(); 
+            });
+            marker.on('mouseout', function(e){
+                if(!clickState) this.closePopup();
+            });
+            marker.on('click', function(e){
+                clickState = true; 
+                this.openPopup(); 
+            }); 
+            marker.on('popupclose', function(e){
+                clickState = false; 
+            });
+
+            markers.push(marker);
+           
+            //polylines
+            if (previousMarker) {
+                let polyline = L.polyline([
+                    [previousMarker.getLatLng().lat, previousMarker.getLatLng().lng],
+                    [marker.getLatLng().lat, marker.getLatLng().lng]
+                ], { color: 'black' }).addTo(map);
+
+                polylines.push(polyline)
             }
+            previousMarker = marker;
         }
       }
     });
@@ -147,7 +210,6 @@ submitBtn.addEventListener('click', () => {
     originInput = document.querySelector('#origin-select').value; 
     destInput = document.querySelector('#destination-select').value; 
     typeInput = document.querySelector('#type-select').value; 
-    sortInput = document.querySelector('#sort-select').value;
 
     const url = (window.location.href).hostname + `map.html?origin=${encodeURIComponent(originInput)}&destination=${encodeURIComponent(destInput)}&type=${encodeURIComponent(typeInput)}&sort=${encodeURIComponent(sortInput)}`;
     window.location.href = url; 
@@ -157,12 +219,6 @@ submitBtn.addEventListener('click', () => {
 //sort options
 const sortSelected = document.querySelector('#sort-select');
 sortSelected.addEventListener('change', () => {
-    
-    // nodesArr.forEach((child) => {
-    //     output.removeChild(child);
-    // });
-
-    //remove previous route nodes
     const output = document.getElementById("output");
     const nodesArr = Array.from(output.children);
 
