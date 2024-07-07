@@ -19,6 +19,8 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
-    "handlebars-loader": "^1.7.3"
+    "handlebars-loader": "^1.7.3",
+    "leaflet": "^1.9.4",
+    "leaflet-polylinedecorator": "^1.6.0"
   }
 }
