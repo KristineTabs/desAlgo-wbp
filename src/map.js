@@ -211,6 +211,7 @@ function createRouteNode(route, index){
         
         plotRoute(route);
 
+        //places or removes route sequence info
         const mapOutput = document.getElementById("mapBar");
         if (mapOutput.children.length > 1) {
             mapOutput.removeChild(mapOutput.children[0]);
@@ -223,11 +224,12 @@ function createRouteNode(route, index){
         let isClicked = true;
         newInfoBtn.addEventListener('click', routePop);
 
+        //function to toggle route info button
         function routePop () {
             if(isClicked) {
                 const routeSeq = document.createElement('div');
                 routeSeq.className = 'routeseq';
-                routeSeq.innerHTML = 'Route Sequence: <br>' + route.route.join(" -> ");
+                routeSeq.innerHTML = 'Route Sequence: <br><br> => ' + route.route.join("<br> => ");
                 
                 mapOutput.insertBefore(routeSeq, mapOutput.firstChild);
             }

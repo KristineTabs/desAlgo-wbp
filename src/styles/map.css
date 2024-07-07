@@ -353,9 +353,10 @@ main{
     }
 }
 
+/* output mapbar */
 #mapBar { 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
     overflow:hidden;
 }
@@ -365,12 +366,14 @@ main{
     flex-direction: column;
     gap: 1em;
     padding: 1em;
+    width: 20%;
 }
 
 #map {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
 
