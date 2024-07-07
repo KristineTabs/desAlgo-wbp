@@ -353,6 +353,28 @@ main{
     }
 }
 
+#mapBar { 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow:hidden;
+}
+
+.routeseq {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+#map {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
 /* scrollbar */
 
 /* width */
