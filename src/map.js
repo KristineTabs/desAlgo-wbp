@@ -109,7 +109,7 @@ function plotRoute(route){
             const y = stationData[obj].coordinates[1];
             let marker;
             if(i == 0){
-                marker = L.marker([x,y], {icon: homeIcon}).addTo(map).bindPopup(`Origin: ${station}`, {closeOnClick: false, autoClose: false});
+                marker = L.marker([x,y], {icon: homeIcon}).addTo(map).bindPopup(`Origin: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
             } else if(i == route.length - 1) {
                 marker =  L.marker([x,y], {icon: destIcon}).addTo(map).bindPopup(`Destination: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
             } else {
@@ -175,7 +175,7 @@ function createRouteNode(route, index){
     nodeBtn.id = `route-${index}`;
 
     const routeName = document.createElement('p'); 
-    distance == 0 ? routeName.textContent = `Route ${index} : Walking Distance`: routeName.textContent = `Route ${index} : ${distance} km`;
+    distance == 0 ? routeName.textContent = `Route ${index + 1} : Walking Distance`: routeName.textContent = `Route ${index + 1} : ${distance} km`;
     routeName.className = 'route-name';
     nodeBtn.appendChild(routeName);
 
@@ -207,8 +207,38 @@ function createRouteNode(route, index){
 
     routeOutput.appendChild(nodeBtn); 
 
-    nodeBtn.addEventListener('click', () => {
+    nodeBtn.addEventListener('click', () => { 
+        
         plotRoute(route);
+
+        //places or removes route sequence info
+        const mapOutput = document.getElementById("mapBar");
+        if (mapOutput.children.length > 1) {
+            mapOutput.removeChild(mapOutput.children[0]);
+        }
+        
+        const oldInfoBtn = document.querySelector('#route-info');
+        const newInfoBtn = oldInfoBtn.cloneNode(true);
+        oldInfoBtn.parentNode.replaceChild(newInfoBtn, oldInfoBtn);
+        
+        let isClicked = true;
+        newInfoBtn.addEventListener('click', routePop);
+
+        //function to toggle route info button
+        function routePop () {
+            if(isClicked) {
+                const routeSeq = document.createElement('div');
+                routeSeq.id = 'seqID';
+                routeSeq.className = 'routeseq';
+                routeSeq.innerHTML = 'Route Sequence: <br><br> => ' + route.route.join("<br> => ");
+                
+                mapOutput.insertBefore(routeSeq, mapOutput.firstChild);
+            }
+            else {
+                mapOutput.removeChild(mapOutput.children[0]);
+            }
+            isClicked = !isClicked;
+        }
     });
 }
 
@@ -227,6 +257,7 @@ submitBtn.addEventListener('click', () => {
 //sort options
 const sortSelected = document.querySelector('#sort-select');
 sortSelected.addEventListener('change', () => {
+
     const output = document.getElementById("output");
     const nodesArr = Array.from(output.children);
 
