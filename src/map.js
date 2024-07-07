@@ -1,4 +1,5 @@
 import * as css from './styles/map.css'
+import 'leaflet-polylinedecorator';
 import homePinImg from './assets/pin-map-origin.svg'
 import destPinImg from './assets/pin-map-dest.svg'
 import defPinImg from './assets/pin-map-stop.svg'
@@ -72,7 +73,8 @@ function plotRoute(route){
     });
 
     polylines.forEach((polyline) => {
-        map.removeLayer(polyline)
+        map.removeLayer(polyline.line);
+        map.removeLayer(polyline.arrow);
     });
 
     markers = []; 
@@ -139,7 +141,13 @@ function plotRoute(route){
                     [marker.getLatLng().lat, marker.getLatLng().lng]
                 ], { color: 'black' }).addTo(map);
 
-                polylines.push(polyline)
+                var arrowHead = L.polylineDecorator(polyline, {
+                    patterns: [
+                      { offset: '50%', repeat: 0, symbol: L.Symbol.arrowHead({ pixelSize: 10, polygon: false, pathOptions: { stroke: true, color: 'black' } }) }
+                    ]
+                  }).addTo(map);
+
+                polylines.push({"line": polyline, "arrow": arrowHead})
             }
             previousMarker = marker;
         }
