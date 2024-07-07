@@ -258,7 +258,7 @@ submitBtn.addEventListener('click', () => {
 const sortSelected = document.querySelector('#sort-select');
 sortSelected.addEventListener('change', () => {
 
-    const output = document.getElementById("output");
+    const output = document.getElementById("output-results");
     const nodesArr = Array.from(output.children);
 
     for (let node = 1; node < nodesArr.length; node++) {
