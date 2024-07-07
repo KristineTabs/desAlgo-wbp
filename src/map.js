@@ -157,7 +157,8 @@ function plotRoute(route){
 
 //get result 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
-const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
+const routes = findAllRoutes(originInput, destInput, typeInput, discountBool);
+console.log('No. Possible Routes: ' + routes.length);
 
 //display results 
 const routeOutput = document.querySelector('#output'); 

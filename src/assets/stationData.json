@@ -870,12 +870,12 @@
         "systemLine": "EDSA Carousel",
         "stopOrder": 15,
         "coordinates": [14.538089383394048, 121.00344233535586],
-        "Taft Avenue (Carousel)": [15],
-        "Roxas Boulevard": [15],
-        "MOA": [15],
-        "DFA/Starbucks": [15],
-        "Ayala Malls Manila Bay/City of Dreams": [15],
-        "PITX": [16]
+        "Taft Avenue (Carousel)": [15, 0],
+        "Roxas Boulevard": [15, 0],
+        "MOA": [15, 0],
+        "DFA/Starbucks": [15, 0],
+        "Ayala Malls Manila Bay/City of Dreams": [15, 0],
+        "PITX": [16, 0]
     },
 
     "Taft Avenue (Carousel)": {
@@ -903,9 +903,9 @@
         "systemLine": "EDSA Carousel",
         "stopOrder": 18,
         "coordinates": [14.535609551646576, 120.98373967321723],
-        "DFA/Starbucks": [15],
-        "Ayala Malls Manila Bay/City of Dreams": [15],
-        "PITX": [15]
+        "DFA/Starbucks": [15, 0],
+        "Ayala Malls Manila Bay/City of Dreams": [15, 0],
+        "PITX": [15, 0]
     },
 
     "DFA/Starbucks": {
