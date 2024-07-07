@@ -160,7 +160,7 @@ const discountBool = typeInput == 'discount' ? 1 : 0;
 const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
 
 //display results 
-const routeOutput = document.querySelector('#output'); 
+const routeOutput = document.querySelector('#output-results'); 
 displayRoutes (routes, sortInput);
 
 
