@@ -52,9 +52,9 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
 
     const graph = {
         //LRT 1
-        'Fernando Poe Jr./Roosevelt': [['Balintawak (LRT1)', 1.87]],
+        'Fernando Poe Jr./Roosevelt': [['Balintawak (LRT1)', 1.87], ['Roosevelt (Carousel)', 0, 10]],
         'Balintawak (LRT1)': [['Yamaha Monumento', 2.25], ['Fernando Poe Jr./Roosevelt', 1.87], ['Balintawak (Carousel)', 0, 1]], //transfer point
-        'Yamaha Monumento': [['5th Avenue', 1.087], ['Balintawak (LRT1)', 2.25]],
+        'Yamaha Monumento': [['5th Avenue', 1.087], ['Balintawak (LRT1)', 2.25], ['Monumento (Carousel)', 0, 10]],
         '5th Avenue': [['R. Papa', 0.954], ['Yamaha Monumento', 1.087]],
         'R. Papa': [['Abad Santos', 0.66], ['5th Avenue', 0.954]],
         'Abad Santos': [['Blumentritt', 0.927], ['R. Papa', 0.66]],
@@ -70,7 +70,7 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
         'Vito Cruz': [['Gil Puyat', 1.061], ['Quirino', 0.827]],
         'Gil Puyat': [['Libertad', 0.73], ['Vito Cruz', 1.061]],
         'Libertad': [['EDSA', 1.01], ['Gil Puyat', 0.73]],
-        'EDSA': [['Baclaran', 0.588], ['Libertad', 1.01], ['Taft Avenue (MRT3)', 0, 5]], //transfer point
+        'EDSA': [['Baclaran', 0.588], ['Libertad', 1.01], ['Taft Avenue (MRT3)', 0, 8], ['Taft Avenue (Carousel)', 0, 8]], //transfer point
         'Baclaran': [['EDSA', 0.588]],
     
         //LRT 2
@@ -89,7 +89,7 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
         'Antipolo': [['Marikina-Pasig', 2.60]],
     
         //MRT 3
-        'North Avenue (MRT3)': [['Quezon Avenue (MRT3)', 1.22]], 
+        'North Avenue (MRT3)': [['Quezon Avenue (MRT3)', 1.22], ['North Avenue (Carousel)', 0, 5]], 
         'Quezon Avenue (MRT3)': [['GMA Kamuning', 0.94], ['North Avenue (MRT3)', 1.22], ['Quezon Avenue (Carousel)', 0, 2]], //transfer point
         'GMA Kamuning': [['Araneta Center-Cubao (MRT3)', 1.85], ['Quezon Avenue (MRT3)', 0.94]], 
         'Araneta Center-Cubao (MRT3)': [['Santolan-Annapolis', 1.45], ['GMA Kamuning', 1.85], ['Araneta Center-Cubao (LRT2)', 0, 7]], //transfer point
@@ -99,17 +99,17 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
         'Boni': [['Guadalupe (MRT3)', 0.77], ['Shaw Boulevard', 0.98]],
         'Guadalupe (MRT3)': [['Buendia (MRT3)', 1.83], ['Boni', 0.77], ['Guadalupe (Carousel)', 0, 2]], //transfer point
         'Buendia (MRT3)': [['Ayala (MRT3)', 0.88], ['Guadalupe (MRT3)', 1.83], ['Buendia (Carousel)', 0, 4]], //transfer point
-        'Ayala (MRT3)': [['Magallanes', 1.19], ['Buendia (MRT3)', 0.88]],
+        'Ayala (MRT3)': [['Magallanes', 1.19], ['Buendia (MRT3)', 0.88], ['Ayala (Carousel)', 0, 6]],
         'Magallanes': [['Taft Avenue (MRT3)', 1.89], ['Ayala (MRT3)', 1.19]],
-        'Taft Avenue (MRT3)': [['Magallanes', 1.89], ['EDSA', 0, 5]], //transfer point
+        'Taft Avenue (MRT3)': [['Magallanes', 1.89], ['EDSA', 0, 8], ['Taft Avenue (Carousel)', 0, 8]], //transfer point
     
         //EDSA Carousel
-        'Monumento (Carousel)': [['Bagong Barrio', 0.55]],
+        'Monumento (Carousel)': [['Bagong Barrio', 0.55], ['Yamaha Monumento', 0, 10]],
         'Bagong Barrio': [['Balintawak (Carousel)', 1.55], ['Monumento (Carousel)', 0.55]],
         'Balintawak (Carousel)': [['Kaingin Road', 0.80], ['Bagong Barrio', 1.55], ['Balintawak (LRT1)', 0, 1]], //transfer point
-        'Kaingin Road': [['Roosevelt', 1.10], ['Balintawak (Carousel)', 0.80]],
-        'Roosevelt': [['North Avenue (Carousel)', 1.50], ['Kaingin Road', 1.10]],
-        'North Avenue (Carousel)': [['Quezon Avenue (Carousel)', 1.30], ['Roosevelt', 1.50]], 
+        'Kaingin Road': [['Roosevelt (Carousel)', 1.10], ['Balintawak (Carousel)', 0.80]],
+        'Roosevelt (Carousel)': [['North Avenue (Carousel)', 1.50], ['Kaingin Road', 1.10], ['Fernando Poe Jr./Roosevelt', 0, 10]],
+        'North Avenue (Carousel)': [['Quezon Avenue (Carousel)', 1.30], ['Roosevelt (Carousel)', 1.50], ['North Avenue (MRT3)', 0, 5]], 
         'Quezon Avenue (Carousel)': [['Nepa Q-Mart', 1.80], ['North Avenue (Carousel)', 1.30], ['Quezon Avenue (MRT3)', 0, 2]], //transfer point
         'Nepa Q-Mart': [['Main Avenue', 1.60], ['Quezon Avenue (Carousel)', 1.80]],
         'Main Avenue': [['Santolan (Carousel)', 0.80], ['Nepa Q-Mart', 1.60]],
@@ -117,9 +117,9 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
         'Ortigas (Carousel)': [['Guadalupe (Carousel)', 2.40], ['Santolan (Carousel)', 2.40], ['Ortigas (MRT3)', 0, 4]], //transfer point
         'Guadalupe (Carousel)': [['Buendia (Carousel)', 2.00], ['Ortigas (Carousel)', 2.40], ['Guadalupe (MRT3)', 0, 2]], //transfer point
         'Buendia (Carousel)': [['Ayala (Carousel)', 2.90], ['Guadalupe (Carousel)', 2.00], ['Buendia (MRT3)', 0, 4]], //transfer point
-        'Ayala (Carousel)': [['Tramo', 4.20], ['Buendia (Carousel)', 2.90]],
+        'Ayala (Carousel)': [['Tramo', 4.20], ['Buendia (Carousel)', 2.90], ['Ayala (MRT3)', 0, 6]],
         'Tramo': [['Taft Avenue (Carousel)', 0.40]],
-        'Taft Avenue (Carousel)': [['Roxas Boulevard', 0.80], ['Ayala (Carousel)', 4.70]],
+        'Taft Avenue (Carousel)': [['Roxas Boulevard', 0.80], ['Ayala (Carousel)', 4.70], ['Taft Avenue (MRT3)', 0, 8], ['EDSA', 0, 8]],
         'Roxas Boulevard': [['MOA', 1.30], ['Taft Avenue (Carousel)', 0.80]],
         'MOA': [['DFA/Starbucks', 1.40]],
         'DFA/Starbucks': [['Ayala Malls Manila Bay/City of Dreams', 0.90], ['Roxas Boulevard', 1.10]],

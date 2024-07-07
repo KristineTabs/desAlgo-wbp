@@ -175,7 +175,7 @@ function createRouteNode(route, index){
     nodeBtn.id = `route-${index}`;
 
     const routeName = document.createElement('p'); 
-    distance == 0 ? routeName.textContent = `Route ${index} : Walking Distance`: routeName.textContent = `Route ${index} : ${distance} km`;
+    distance == 0 ? routeName.textContent = `Route ${index + 1} : Walking Distance`: routeName.textContent = `Route ${index + 1} : ${distance} km`;
     routeName.className = 'route-name';
     nodeBtn.appendChild(routeName);
 
@@ -228,6 +228,7 @@ function createRouteNode(route, index){
         function routePop () {
             if(isClicked) {
                 const routeSeq = document.createElement('div');
+                routeSeq.id = 'seqID';
                 routeSeq.className = 'routeseq';
                 routeSeq.innerHTML = 'Route Sequence: <br><br> => ' + route.route.join("<br> => ");
                 

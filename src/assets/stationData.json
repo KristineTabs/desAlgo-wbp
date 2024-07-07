@@ -600,7 +600,7 @@
         "Bagong Barrio": [15, 15],
         "Balintawak (Carousel)": [15, 15],
         "Kaingin Road": [15, 15],
-        "Roosevelt": [15, 15],
+        "Roosevelt (Carousel)": [15, 15],
         "North Avenue (Carousel)": [15.75, 15.75],
         "Quezon Avenue (Carousel)": [19.25, 19.25],
         "Nepa Q-Mart": [23.50, 23.50],
@@ -625,7 +625,7 @@
         "coordinates": [14.658129054215442, 120.99835180966367],
         "Balintawak (Carousel)": [15, 15],
         "Kaingin Road": [15, 15],
-        "Roosevelt": [15, 15],
+        "Roosevelt (Carousel)": [15, 15],
         "North Avenue (Carousel)": [15, 15],
         "Quezon Avenue (Carousel)": [15.75, 15.75],
         "Nepa Q-Mart": [20, 20],
@@ -649,7 +649,7 @@
         "stopOrder": 3,
         "coordinates": [14.65797863075305, 121.00498334498165],
         "Kaingin Road": [15, 15],
-        "Roosevelt": [15, 15],
+        "Roosevelt (Carousel)": [15, 15],
         "North Avenue (Carousel)": [15, 15],
         "Quezon Avenue (Carousel)": [15, 15],
         "Nepa Q-Mart": [18.25, 18.25],
@@ -672,7 +672,7 @@
         "systemLine": "EDSA Carousel",
         "stopOrder": 4,
         "coordinates": [14.658310779329534, 121.01159230799453],
-        "Roosevelt": [15, 15],
+        "Roosevelt (Carousel)": [15, 15],
         "North Avenue (Carousel)": [15, 15],
         "Quezon Avenue (Carousel)": [15, 15],
         "Nepa Q-Mart": [16.25, 16.25],
@@ -691,7 +691,7 @@
         "PITX": [66.75, 65.75]
     },
   
-    "Roosevelt": {
+    "Roosevelt (Carousel)": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 5,
         "coordinates": [14.658518371934086, 121.01978913874424],
