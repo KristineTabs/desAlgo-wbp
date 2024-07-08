@@ -60,7 +60,6 @@
            <div id="output">
                 <div class="output-header">
                     <h3>ROUTES</h3>
-                    <button class="info-btn" id="route-info">info</button>
                     <div class="sort-options">
                         <label for="sort">SORT BY:</label>
                         <select name="sort" id="sort-select">
@@ -74,12 +73,16 @@
                 <div id="output-results"></div>
            </div>
         </div>
-
-        <div id="mapBar">
-
-            <div id="map">
+        <div id="map">
                 
-            </div>
+        </div>
+
+        <div id="info-panel">
+            <button id="info-header">
+                View Route Information
+                <img src="./assets/collapse-down.svg" alt="collapse" id="info-header-img">
+            </button>
+            <div id="info-content"></div>
         </div>
 
     </main> 
