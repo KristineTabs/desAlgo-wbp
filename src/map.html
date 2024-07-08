@@ -67,14 +67,22 @@
                             <option value="transfers">Transfers</option>
                             <option value="time">Time</option>
                         </select>
-                        <button><img src="./assets/sort-swap.svg" alt="asc/desc"></button>
+                        <button id="sort-swap"><img src="./assets/sort-swap.svg" alt="asc/desc"></button>
                     </div>
                 </div>
-
+                <div id="output-results"></div>
            </div>
         </div>
         <div id="map">
-    
+                
+        </div>
+
+        <div id="info-panel">
+            <button id="info-header">
+                View Route Information
+                <img src="./assets/collapse-down.svg" alt="collapse" id="info-header-img">
+            </button>
+            <div id="info-content"></div>
         </div>
 
     </main> 

@@ -1,290 +1,290 @@
 {
-    "Fernando Poe Jr./Roosevelt": {
+    "LRT 1 - Fernando Poe Jr./Roosevelt": {
         "systemLine": "LRT 1",
         "coordinates": [14.657889653738007, 121.02115581016683],
-        "Balintawak (LRT1)": [20, 16],
-        "Yamaha Monumento": [20, 18],
-        "5th Avenue": [20, 20],
-        "R. Papa": [25, 21],
-        "Abad Santos": [25, 22],
-        "Blumentritt": [25, 23],
-        "Tayuman": [25, 23],
-        "Bambang": [25, 24],
-        "Doroteo Jose": [25, 25],
-        "Carriedo": [30, 26],
-        "Central Terminal": [30, 27],
-        "United Nations": [30, 28],
-        "Pedro Gil": [30, 29],
-        "Quirino": [30, 30],
-        "Vito Cruz": [35, 31],
-        "Gil Puyat": [35, 32],
-        "Libertad": [35, 33],
-        "EDSA": [35, 34],
-        "Baclaran": [35, 35]
+        "LRT 1 - Balintawak": [20, 16],
+        "LRT 1 - Yamaha Monumento": [20, 18],
+        "LRT 1 - 5th Avenue": [20, 20],
+        "LRT 1 - R. Papa": [25, 21],
+        "LRT 1 - Abad Santos": [25, 22],
+        "LRT 1 - Blumentritt": [25, 23],
+        "LRT 1 - Tayuman": [25, 23],
+        "LRT 1 - Bambang": [25, 24],
+        "LRT 1 - Doroteo Jose": [25, 25],
+        "LRT 1 - Carriedo": [30, 26],
+        "LRT 1 - Central Terminal": [30, 27],
+        "LRT 1 - United Nations": [30, 28],
+        "LRT 1 - Pedro Gil": [30, 29],
+        "LRT 1 - Quirino": [30, 30],
+        "LRT 1 - Vito Cruz": [35, 31],
+        "LRT 1 - Gil Puyat": [35, 32],
+        "LRT 1 - Libertad": [35, 33],
+        "LRT 1 - EDSA": [35, 34],
+        "LRT 1 - Baclaran": [35, 35]
     },
 
-    "Balintawak (LRT1)": {
+    "LRT 1 - Balintawak": {
         "systemLine": "LRT 1",
         "coordinates": [14.657608947306406, 121.00408004763605],
-        "Yamaha Monumento": [20, 16],
-        "5th Avenue": [20, 17],
-        "R. Papa": [20, 18],
-        "Abad Santos": [20, 19],
-        "Blumentritt": [20, 20],
-        "Tayuman": [25, 21],
-        "Bambang": [25, 22],
-        "Doroteo Jose": [25, 23],
-        "Carriedo": [25, 24],
-        "Central Terminal": [25, 24],
-        "United Nations": [30, 26],
-        "Pedro Gil": [30, 27],
-        "Quirino": [30, 28],
-        "Vito Cruz": [30, 29],
-        "Gil Puyat": [30, 30],
-        "Libertad": [35, 31],
-        "EDSA": [35, 32],
-        "Baclaran": [35, 33]
+        "LRT 1 - Yamaha Monumento": [20, 16],
+        "LRT 1 - 5th Avenue": [20, 17],
+        "LRT 1 - R. Papa": [20, 18],
+        "LRT 1 - Abad Santos": [20, 19],
+        "LRT 1 - Blumentritt": [20, 20],
+        "LRT 1 - Tayuman": [25, 21],
+        "LRT 1 - Bambang": [25, 22],
+        "LRT 1 - Doroteo Jose": [25, 23],
+        "LRT 1 - Carriedo": [25, 24],
+        "LRT 1 - Central Terminal": [25, 24],
+        "LRT 1 - United Nations": [30, 26],
+        "LRT 1 - Pedro Gil": [30, 27],
+        "LRT 1 - Quirino": [30, 28],
+        "LRT 1 - Vito Cruz": [30, 29],
+        "LRT 1 - Gil Puyat": [30, 30],
+        "LRT 1 - Libertad": [35, 31],
+        "LRT 1 - EDSA": [35, 32],
+        "LRT 1 - Baclaran": [35, 33]
     },
 
-    "Yamaha Monumento": {
+    "LRT 1 - Yamaha Monumento": {
         "systemLine": "LRT 1",
         "coordinates": [14.65434814510447, 120.98385177612144],
-        "5th Avenue": [15, 15],
-        "R. Papa": [20, 16],
-        "Abad Santos": [20, 17],
-        "Blumentritt": [20, 18],
-        "Tayuman": [20, 18],
-        "Bambang": [20, 19],
-        "Doroteo Jose": [20, 20],
-        "Carriedo": [25, 21],
-        "Central Terminal": [25, 22],
-        "United Nations": [25, 23],
-        "Pedro Gil": [25, 24],
-        "Quirino": [25, 25],
-        "Vito Cruz": [30, 26],
-        "Gil Puyat": [30, 27],
-        "Libertad": [30, 28],
-        "EDSA": [30, 29],
-        "Baclaran": [30, 30]
+        "LRT 1 - 5th Avenue": [15, 15],
+        "LRT 1 - R. Papa": [20, 16],
+        "LRT 1 - Abad Santos": [20, 17],
+        "LRT 1 - Blumentritt": [20, 18],
+        "LRT 1 - Tayuman": [20, 18],
+        "LRT 1 - Bambang": [20, 19],
+        "LRT 1 - Doroteo Jose": [20, 20],
+        "LRT 1 - Carriedo": [25, 21],
+        "LRT 1 - Central Terminal": [25, 22],
+        "LRT 1 - United Nations": [25, 23],
+        "LRT 1 - Pedro Gil": [25, 24],
+        "LRT 1 - Quirino": [25, 25],
+        "LRT 1 - Vito Cruz": [30, 26],
+        "LRT 1 - Gil Puyat": [30, 27],
+        "LRT 1 - Libertad": [30, 28],
+        "LRT 1 - EDSA": [30, 29],
+        "LRT 1 - Baclaran": [30, 30]
     },
 
-    "5th Avenue": {
+    "LRT 1 - 5th Avenue": {
         "systemLine": "LRT 1",
         "coordinates": [14.644498520777908, 120.98360345334932],
-        "R. Papa": [15, 14],
-        "Abad Santos": [15, 15],
-        "Blumentritt": [20, 16],
-        "Tayuman": [20, 17],
-        "Bambang": [20, 18],
-        "Doroteo Jose": [20, 19],
-        "Carriedo": [20, 20],
-        "Central Terminal": [20, 20],
-        "United Nations": [25, 22],
-        "Pedro Gil": [25, 23],
-        "Quirino": [25, 24],
-        "Vito Cruz": [25, 25],
-        "Gil Puyat": [30, 26],
-        "Libertad": [30, 27],
-        "EDSA": [30, 28],
-        "Baclaran": [30, 29]
+        "LRT 1 - R. Papa": [15, 14],
+        "LRT 1 - Abad Santos": [15, 15],
+        "LRT 1 - Blumentritt": [20, 16],
+        "LRT 1 - Tayuman": [20, 17],
+        "LRT 1 - Bambang": [20, 18],
+        "LRT 1 - Doroteo Jose": [20, 19],
+        "LRT 1 - Carriedo": [20, 20],
+        "LRT 1 - Central Terminal": [20, 20],
+        "LRT 1 - United Nations": [25, 22],
+        "LRT 1 - Pedro Gil": [25, 23],
+        "LRT 1 - Quirino": [25, 24],
+        "LRT 1 - Vito Cruz": [25, 25],
+        "LRT 1 - Gil Puyat": [30, 26],
+        "LRT 1 - Libertad": [30, 27],
+        "LRT 1 - EDSA": [30, 28],
+        "LRT 1 - Baclaran": [30, 29]
     },
 
-    "R. Papa": {
+    "LRT 1 - R. Papa": {
         "systemLine": "LRT 1",
         "coordinates": [14.63622899004198, 120.98237343825811],
-        "Abad Santos": [15, 14],
-        "Blumentritt": [15, 15],
-        "Tayuman": [20, 16],
-        "Bambang": [20, 17],
-        "Doroteo Jose": [20, 18],
-        "Carriedo": [20, 18],
-        "Central Terminal": [20, 19],
-        "United Nations": [25, 21],
-        "Pedro Gil": [25, 22],
-        "Quirino": [25, 23],
-        "Vito Cruz": [25, 24],
-        "Gil Puyat": [25, 25],
-        "Libertad": [30, 26],
-        "EDSA": [30, 27],
-        "Baclaran": [30, 28]
+        "LRT 1 - Abad Santos": [15, 14],
+        "LRT 1 - Blumentritt": [15, 15],
+        "LRT 1 - Tayuman": [20, 16],
+        "LRT 1 - Bambang": [20, 17],
+        "LRT 1 - Doroteo Jose": [20, 18],
+        "LRT 1 - Carriedo": [20, 18],
+        "LRT 1 - Central Terminal": [20, 19],
+        "LRT 1 - United Nations": [25, 21],
+        "LRT 1 - Pedro Gil": [25, 22],
+        "LRT 1 - Quirino": [25, 23],
+        "LRT 1 - Vito Cruz": [25, 24],
+        "LRT 1 - Gil Puyat": [25, 25],
+        "LRT 1 - Libertad": [30, 26],
+        "LRT 1 - EDSA": [30, 27],
+        "LRT 1 - Baclaran": [30, 28]
     },
 
-    "Abad Santos": {
+    "LRT 1 - Abad Santos": {
         "systemLine": "LRT 1",
         "coordinates": [14.630644818864509, 120.98142359867933],
-        "Blumentritt": [15, 14],
-        "Tayuman": [15, 15],
-        "Bambang": [20, 16],
-        "Doroteo Jose": [20, 17],
-        "Carriedo": [20, 18],
-        "Central Terminal": [20, 18],
-        "United Nations": [20, 20],
-        "Pedro Gil": [25, 21],
-        "Quirino": [25, 22],
-        "Vito Cruz": [25, 23],
-        "Gil Puyat": [25, 24],
-        "Libertad": [25, 25],
-        "EDSA": [30, 26],
-        "Baclaran": [30, 27]
+        "LRT 1 - Blumentritt": [15, 14],
+        "LRT 1 - Tayuman": [15, 15],
+        "LRT 1 - Bambang": [20, 16],
+        "LRT 1 - Doroteo Jose": [20, 17],
+        "LRT 1 - Carriedo": [20, 18],
+        "LRT 1 - Central Terminal": [20, 18],
+        "LRT 1 - United Nations": [20, 20],
+        "LRT 1 - Pedro Gil": [25, 21],
+        "LRT 1 - Quirino": [25, 22],
+        "LRT 1 - Vito Cruz": [25, 23],
+        "LRT 1 - Gil Puyat": [25, 24],
+        "LRT 1 - Libertad": [25, 25],
+        "LRT 1 - EDSA": [30, 26],
+        "LRT 1 - Baclaran": [30, 27]
     },
 
-    "Blumentritt": {
+    "LRT 1 - Blumentritt": {
         "systemLine": "LRT 1",
         "coordinates": [14.622659032495866, 120.98291828552298],
-        "Tayuman": [15, 14],
-        "Bambang": [15, 15],
-        "Doroteo Jose": [20, 16],
-        "Carriedo": [20, 16],
-        "Central Terminal": [20, 17],
-        "United Nations": [20, 19],
-        "Pedro Gil": [20, 20],
-        "Quirino": [25, 21],
-        "Vito Cruz": [25, 22],
-        "Gil Puyat": [25, 23],
-        "Libertad": [25, 24],
-        "EDSA": [25, 25],
-        "Baclaran": [30, 26]
+        "LRT 1 - Tayuman": [15, 14],
+        "LRT 1 - Bambang": [15, 15],
+        "LRT 1 - Doroteo Jose": [20, 16],
+        "LRT 1 - Carriedo": [20, 16],
+        "LRT 1 - Central Terminal": [20, 17],
+        "LRT 1 - United Nations": [20, 19],
+        "LRT 1 - Pedro Gil": [20, 20],
+        "LRT 1 - Quirino": [25, 21],
+        "LRT 1 - Vito Cruz": [25, 22],
+        "LRT 1 - Gil Puyat": [25, 23],
+        "LRT 1 - Libertad": [25, 24],
+        "LRT 1 - EDSA": [25, 25],
+        "LRT 1 - Baclaran": [30, 26]
     },
 
-    "Tayuman": {
+    "LRT 1 - Tayuman": {
         "systemLine": "LRT 1",
         "coordinates": [14.616550215597185, 120.98267814038542],
-        "Bambang": [15, 14],
-        "Doroteo Jose": [15, 15],
-        "Carriedo": [20, 16],
-        "Central Terminal": [20, 17],
-        "United Nations": [20, 18],
-        "Pedro Gil": [20, 19],
-        "Quirino": [20, 20],
-        "Vito Cruz": [25, 21],
-        "Gil Puyat": [25, 22],
-        "Libertad": [25, 23],
-        "EDSA": [25, 24],
-        "Baclaran": [25, 25]
+        "LRT 1 - Bambang": [15, 14],
+        "LRT 1 - Doroteo Jose": [15, 15],
+        "LRT 1 - Carriedo": [20, 16],
+        "LRT 1 - Central Terminal": [20, 17],
+        "LRT 1 - United Nations": [20, 18],
+        "LRT 1 - Pedro Gil": [20, 19],
+        "LRT 1 - Quirino": [20, 20],
+        "LRT 1 - Vito Cruz": [25, 21],
+        "LRT 1 - Gil Puyat": [25, 22],
+        "LRT 1 - Libertad": [25, 23],
+        "LRT 1 - EDSA": [25, 24],
+        "LRT 1 - Baclaran": [25, 25]
     },
 
-    "Bambang": {
+    "LRT 1 - Bambang": {
         "systemLine": "LRT 1",
         "coordinates": [14.611175199216355, 120.98248034301396],
-        "Doroteo Jose": [15, 14],
-        "Carriedo": [15, 15],
-        "Central Terminal": [20, 16],
-        "United Nations": [20, 17],
-        "Pedro Gil": [20, 18],
-        "Quirino": [20, 19],
-        "Vito Cruz": [20, 20],
-        "Gil Puyat": [25, 21],
-        "Libertad": [25, 22],
-        "EDSA": [25, 24],
-        "Baclaran": [25, 24]
+        "LRT 1 - Doroteo Jose": [15, 14],
+        "LRT 1 - Carriedo": [15, 15],
+        "LRT 1 - Central Terminal": [20, 16],
+        "LRT 1 - United Nations": [20, 17],
+        "LRT 1 - Pedro Gil": [20, 18],
+        "LRT 1 - Quirino": [20, 19],
+        "LRT 1 - Vito Cruz": [20, 20],
+        "LRT 1 - Gil Puyat": [25, 21],
+        "LRT 1 - Libertad": [25, 22],
+        "LRT 1 - EDSA": [25, 24],
+        "LRT 1 - Baclaran": [25, 24]
     },
 
-    "Doroteo Jose": {
+    "LRT 1 - Doroteo Jose": {
         "systemLine": "LRT 1",
         "coordinates": [14.605452627231452, 120.98203801067285],
-        "Carriedo": [15, 14],
-        "Central Terminal": [15, 15],
-        "United Nations": [20, 16],
-        "Pedro Gil": [20, 17],
-        "Quirino": [20, 18],
-        "Vito Cruz": [20, 19],
-        "Gil Puyat": [25, 21],
-        "Libertad": [25, 22],
-        "EDSA": [25, 23],
-        "Baclaran": [25, 23]
+        "LRT 1 - Carriedo": [15, 14],
+        "LRT 1 - Central Terminal": [15, 15],
+        "LRT 1 - United Nations": [20, 16],
+        "LRT 1 - Pedro Gil": [20, 17],
+        "LRT 1 - Quirino": [20, 18],
+        "LRT 1 - Vito Cruz": [20, 19],
+        "LRT 1 - Gil Puyat": [25, 21],
+        "LRT 1 - Libertad": [25, 22],
+        "LRT 1 - EDSA": [25, 23],
+        "LRT 1 - Baclaran": [25, 23]
     },
 
-    "Carriedo": {
+    "LRT 1 - Carriedo": {
         "systemLine": "LRT 1",
         "coordinates": [14.599142207751923, 120.98134864376813],
-        "Central Terminal": [15, 14],
-        "United Nations": [20, 16],
-        "Pedro Gil": [20, 17],
-        "Quirino": [20, 18],
-        "Vito Cruz": [20, 19],
-        "Gil Puyat": [20, 20],
-        "Libertad": [25, 21],
-        "EDSA": [25, 22],
-        "Baclaran": [25, 23]
+        "LRT 1 - Central Terminal": [15, 14],
+        "LRT 1 - United Nations": [20, 16],
+        "LRT 1 - Pedro Gil": [20, 17],
+        "LRT 1 - Quirino": [20, 18],
+        "LRT 1 - Vito Cruz": [20, 19],
+        "LRT 1 - Gil Puyat": [20, 20],
+        "LRT 1 - Libertad": [25, 21],
+        "LRT 1 - EDSA": [25, 22],
+        "LRT 1 - Baclaran": [25, 23]
     },
 
-    "Central Terminal": {
+    "LRT 1 - Central Terminal": {
         "systemLine": "LRT 1",
         "coordinates": [14.592749859504242, 120.9816313693701],
-        "United Nations": [15, 15],
-        "Pedro Gil": [20, 16],
-        "Quirino": [20, 17],
-        "Vito Cruz": [20, 18],
-        "Gil Puyat": [20, 19],
-        "Libertad": [20, 20],
-        "EDSA": [25, 21],
-        "Baclaran": [25, 22]
+        "LRT 1 - United Nations": [15, 15],
+        "LRT 1 - Pedro Gil": [20, 16],
+        "LRT 1 - Quirino": [20, 17],
+        "LRT 1 - Vito Cruz": [20, 18],
+        "LRT 1 - Gil Puyat": [20, 19],
+        "LRT 1 - Libertad": [20, 20],
+        "LRT 1 - EDSA": [25, 21],
+        "LRT 1 - Baclaran": [25, 22]
     },
 
-    "United Nations": {
+    "LRT 1 - United Nations": {
         "systemLine": "LRT 1",
         "coordinates": [14.582549125416763, 120.98462309302388],
-        "Pedro Gil": [15, 14],
-        "Quirino": [15, 15],
-        "Vito Cruz": [20, 16],
-        "Gil Puyat": [20, 17],
-        "Libertad": [20, 18],
-        "EDSA": [20, 20],
-        "Baclaran": [20, 20]
+        "LRT 1 - Pedro Gil": [15, 14],
+        "LRT 1 - Quirino": [15, 15],
+        "LRT 1 - Vito Cruz": [20, 16],
+        "LRT 1 - Gil Puyat": [20, 17],
+        "LRT 1 - Libertad": [20, 18],
+        "LRT 1 - EDSA": [20, 20],
+        "LRT 1 - Baclaran": [20, 20]
     },
 
-    "Pedro Gil": {
+    "LRT 1 - Pedro Gil": {
         "systemLine": "LRT 1",
         "coordinates": [14.576539263153432, 120.98806689908079],
-        "Quirino": [15, 14],
-        "Vito Cruz": [15, 15],
-        "Gil Puyat": [20, 17],
-        "Libertad": [20, 17],
-        "EDSA": [20, 19],
-        "Baclaran": [20, 19]
+        "LRT 1 - Quirino": [15, 14],
+        "LRT 1 - Vito Cruz": [15, 15],
+        "LRT 1 - Gil Puyat": [20, 17],
+        "LRT 1 - Libertad": [20, 17],
+        "LRT 1 - EDSA": [20, 19],
+        "LRT 1 - Baclaran": [20, 19]
     },
 
-    "Quirino": {
+    "LRT 1 - Quirino": {
         "systemLine": "LRT 1",
         "coordinates": [14.570305114899911, 120.99156127465545],
-        "Vito Cruz": [15, 14],
-        "Gil Puyat": [20, 16],
-        "Libertad": [20, 16],
-        "EDSA": [20, 18],
-        "Baclaran": [20, 18]
+        "LRT 1 - Vito Cruz": [15, 14],
+        "LRT 1 - Gil Puyat": [20, 16],
+        "LRT 1 - Libertad": [20, 16],
+        "LRT 1 - EDSA": [20, 18],
+        "LRT 1 - Baclaran": [20, 18]
     },
 
-    "Vito Cruz": {
+    "LRT 1 - Vito Cruz": {
         "systemLine": "LRT 1",
         "coordinates":  [14.56331711798168, 120.9948436330176],
-        "Gil Puyat": [15, 15],
-        "Libertad": [15, 15],
-        "EDSA": [20, 17],
-        "Baclaran": [20, 17]
+        "LRT 1 - Gil Puyat": [15, 15],
+        "LRT 1 - Libertad": [15, 15],
+        "LRT 1 - EDSA": [20, 17],
+        "LRT 1 - Baclaran": [20, 17]
     },
 
-    "Gil Puyat": {
+    "LRT 1 - Gil Puyat": {
         "systemLine": "LRT 1",
         "coordinates": [14.554247302688283, 120.9971708954906],
-        "Libertad": [15, 14],
-        "EDSA": [15, 15],
-        "Baclaran": [20, 16]
+        "LRT 1 - Libertad": [15, 14],
+        "LRT 1 - EDSA": [15, 15],
+        "LRT 1 - Baclaran": [20, 16]
     },
 
-    "Libertad": {
+    "LRT 1 - Libertad": {
         "systemLine": "LRT 1",
         "coordinates": [14.547749274771201, 120.99861619675356],
-        "EDSA": [15, 15],
-        "Baclaran": [15, 15]
+        "LRT 1 - EDSA": [15, 15],
+        "LRT 1 - Baclaran": [15, 15]
     },
 
-    "EDSA": {
+    "LRT 1 - EDSA": {
         "systemLine": "LRT 1",
         "coordinates": [14.539016300030438, 121.00062593987309],
-        "Baclaran": [15, 14]
+        "LRT 1 - Baclaran": [15, 14]
     },
 
-    "Baclaran": {
+    "LRT 1 - Baclaran": {
         "systemLine": "LRT 1",
         "coordinates": [14.534233171778432, 120.99835008753472]
     },
@@ -295,145 +295,145 @@
 
 
 
-    "Recto": {
+    "LRT 2 - Recto": {
         "systemLine": "LRT 2",
         "coordinates": [14.603632328150782, 120.98362373662468],
-        "Legarda": [15, 15],
-        "Pureza": [20, 16],
-        "V. Mapa": [20, 18],
-        "J. Ruiz": [20, 19],
-        "Gilmore": [25, 21],
-        "Betty Go-Belmonte": [25, 22],
-        "Araneta Center-Cubao (LRT2)": [25, 23],
-        "Anonas": [25, 25],
-        "Katipunan": [30, 26],
-        "Santolan (LRT2)": [30, 28],
-        "Marikina-Pasig": [35, 31],
-        "Antipolo": [35, 33]
+        "LRT 2 - Legarda": [15, 15],
+        "LRT 2 - Pureza": [20, 16],
+        "LRT 2 - V. Mapa": [20, 18],
+        "LRT 2 - J. Ruiz": [20, 19],
+        "LRT 2 - Gilmore": [25, 21],
+        "LRT 2 - Betty Go-Belmonte": [25, 22],
+        "LRT 2 - Araneta Center-Cubao": [25, 23],
+        "LRT 2 - Anonas": [25, 25],
+        "LRT 2 - Katipunan": [30, 26],
+        "LRT 2 - Santolan": [30, 28],
+        "LRT 2 - Marikina-Pasig": [35, 31],
+        "LRT 2 - Antipolo": [35, 33]
     },
 
-    "Legarda": {
+    "LRT 2 - Legarda": {
         "systemLine": "LRT 2",
         "coordinates": [14.601182056217423, 120.99284394641161],
-        "Pureza": [15, 15],
-        "V. Mapa": [20, 17],
-        "J. Ruiz": [20, 18],
-        "Gilmore": [20, 19],
-        "Betty Go-Belmonte": [25, 21],
-        "Araneta Center-Cubao (LRT2)": [25, 22],
-        "Anonas": [25, 24],
-        "Katipunan": [25, 25],
-        "Santolan (LRT2)": [30, 27],
-        "Marikina-Pasig": [30, 29],
-        "Antipolo": [35, 32]
+        "LRT 2 - Pureza": [15, 15],
+        "LRT 2 - V. Mapa": [20, 17],
+        "LRT 2 - J. Ruiz": [20, 18],
+        "LRT 2 - Gilmore": [20, 19],
+        "LRT 2 - Betty Go-Belmonte": [25, 21],
+        "LRT 2 - Araneta Center-Cubao": [25, 22],
+        "LRT 2 - Anonas": [25, 24],
+        "LRT 2 - Katipunan": [25, 25],
+        "LRT 2 - Santolan": [30, 27],
+        "LRT 2 - Marikina-Pasig": [30, 29],
+        "LRT 2 - Antipolo": [35, 32]
     },
 
-    "Pureza": {
+    "LRT 2 - Pureza": {
         "systemLine": "LRT 2",
         "coordinates": [14.602026608087174, 121.00521028318215],
-        "V. Mapa": [15, 15],
-        "J. Ruiz": [20, 16],
-        "Gilmore": [20, 18],
-        "Betty Go-Belmonte": [20, 19],
-        "Araneta Center-Cubao (LRT2)": [20, 20],
-        "Anonas": [25, 22],
-        "Katipunan": [25, 23],
-        "Santolan (LRT2)": [30, 26],
-        "Marikina-Pasig": [30, 28],
-        "Antipolo": [30, 30]
+        "LRT 2 - V. Mapa": [15, 15],
+        "LRT 2 - J. Ruiz": [20, 16],
+        "LRT 2 - Gilmore": [20, 18],
+        "LRT 2 - Betty Go-Belmonte": [20, 19],
+        "LRT 2 - Araneta Center-Cubao": [20, 20],
+        "LRT 2 - Anonas": [25, 22],
+        "LRT 2 - Katipunan": [25, 23],
+        "LRT 2 - Santolan": [30, 26],
+        "LRT 2 - Marikina-Pasig": [30, 28],
+        "LRT 2 - Antipolo": [30, 30]
     },
 
-    "V. Mapa": {
+    "LRT 2 - V. Mapa": {
         "systemLine": "LRT 2",
         "coordinates": [14.604346800947562, 121.01724242736267],
-        "J. Ruiz": [15, 15],
-        "Gilmore": [20, 16],
-        "Betty Go-Belmonte": [20, 17],
-        "Araneta Center-Cubao (LRT2)": [20, 19],
-        "Anonas": [20, 20],
-        "Katipunan": [25, 22],
-        "Santolan (LRT2)": [25, 24],
-        "Marikina-Pasig": [30, 26],
-        "Antipolo": [30, 29]
+        "LRT 2 - J. Ruiz": [15, 15],
+        "LRT 2 - Gilmore": [20, 16],
+        "LRT 2 - Betty Go-Belmonte": [20, 17],
+        "LRT 2 - Araneta Center-Cubao": [20, 19],
+        "LRT 2 - Anonas": [20, 20],
+        "LRT 2 - Katipunan": [25, 22],
+        "LRT 2 - Santolan": [25, 24],
+        "LRT 2 - Marikina-Pasig": [30, 26],
+        "LRT 2 - Antipolo": [30, 29]
     },
 
-    "J. Ruiz": {
+    "LRT 2 - J. Ruiz": {
         "systemLine": "LRT 2",
         "coordinates": [14.610743760554152, 121.02620680115118],
-        "Gilmore": [15, 14],
-        "Betty Go-Belmonte": [20, 16],
-        "Araneta Center-Cubao (LRT2)": [20, 17],
-        "Anonas": [20, 19],
-        "Katipunan": [20, 20],
-        "Santolan (LRT2)": [25, 22],
-        "Marikina-Pasig": [25, 24],
-        "Antipolo": [30, 27]
+        "LRT 2 - Gilmore": [15, 14],
+        "LRT 2 - Betty Go-Belmonte": [20, 16],
+        "LRT 2 - Araneta Center-Cubao": [20, 17],
+        "LRT 2 - Anonas": [20, 19],
+        "LRT 2 - Katipunan": [20, 20],
+        "LRT 2 - Santolan": [25, 22],
+        "LRT 2 - Marikina-Pasig": [25, 24],
+        "LRT 2 - Antipolo": [30, 27]
     },
 
-    "Gilmore": {
+    "LRT 2 - Gilmore": {
         "systemLine": "LRT 2",
         "coordinates": [14.613636613059708, 121.03425951953966],
-        "Betty Go-Belmonte": [15, 15],
-        "Araneta Center-Cubao (LRT2)": [20, 16],
-        "Anonas": [20, 18],
-        "Katipunan": [20, 19],
-        "Santolan (LRT2)": [25, 21],
-        "Marikina-Pasig": [25, 23],
-        "Antipolo": [30, 26]
+        "LRT 2 - Betty Go-Belmonte": [15, 15],
+        "LRT 2 - Araneta Center-Cubao": [20, 16],
+        "LRT 2 - Anonas": [20, 18],
+        "LRT 2 - Katipunan": [20, 19],
+        "LRT 2 - Santolan": [25, 21],
+        "LRT 2 - Marikina-Pasig": [25, 23],
+        "LRT 2 - Antipolo": [30, 26]
     },
 
-    "Betty Go-Belmonte": {
+    "LRT 2 - Betty Go-Belmonte": {
         "systemLine": "LRT 2",
         "coordinates": [14.618585653895234, 121.04273844361174],
-        "Araneta Center-Cubao (LRT2)": [15, 15],
-        "Anonas": [20, 16],
-        "Katipunan": [20, 18],
-        "Santolan (LRT2)": [20, 20],
-        "Marikina-Pasig": [25, 22],
-        "Antipolo": [25, 25]
+        "LRT 2 - Araneta Center-Cubao": [15, 15],
+        "LRT 2 - Anonas": [20, 16],
+        "LRT 2 - Katipunan": [20, 18],
+        "LRT 2 - Santolan": [20, 20],
+        "LRT 2 - Marikina-Pasig": [25, 22],
+        "LRT 2 - Antipolo": [25, 25]
     },
 
-    "Araneta Center-Cubao (LRT2)": {
+    "LRT 2 - Araneta Center-Cubao": {
         "systemLine": "LRT 2",
         "coordinates": [14.622943030827326, 121.05273108133014],
-        "Anonas": [15, 15],
-        "Katipunan": [20, 16],
-        "Santolan (LRT2)": [20, 19],
-        "Marikina-Pasig": [25, 21],
-        "Antipolo": [25, 23]
+        "LRT 2 - Anonas": [15, 15],
+        "LRT 2 - Katipunan": [20, 16],
+        "LRT 2 - Santolan": [20, 19],
+        "LRT 2 - Marikina-Pasig": [25, 21],
+        "LRT 2 - Antipolo": [25, 23]
     },
 
-    "Anonas": {
+    "LRT 2 - Anonas": {
         "systemLine": "LRT 2",
         "coordinates": [14.62809923095422, 121.06471053073669],
-        "Katipunan": [15, 14],
-        "Santolan (LRT2)": [20, 17],
-        "Marikina-Pasig": [20, 19],
-        "Antipolo": [25, 22]
+        "LRT 2 - Katipunan": [15, 14],
+        "LRT 2 - Santolan": [20, 17],
+        "LRT 2 - Marikina-Pasig": [20, 19],
+        "LRT 2 - Antipolo": [25, 22]
     },
 
-    "Katipunan": {
+    "LRT 2 - Katipunan": {
         "systemLine": "LRT 2",
         "coordinates": [14.631325085134357, 121.07242679482229],
-        "Santolan (LRT2)": [20, 16],
-        "Marikina-Pasig": [20, 18],
-        "Antipolo": [25, 21]
+        "LRT 2 - Santolan": [20, 16],
+        "LRT 2 - Marikina-Pasig": [20, 18],
+        "LRT 2 - Antipolo": [25, 21]
     },
 
-    "Santolan (LRT2)": {
+    "LRT 2 - Santolan": {
         "systemLine": "LRT 2",
         "coordinates": [14.622328535836113, 121.0867371871186],
-        "Marikina-Pasig": [15, 15],
-        "Antipolo": [20, 18]
+        "LRT 2 - Marikina-Pasig": [15, 15],
+        "LRT 2 - Antipolo": [20, 18]
     },
 
-    "Marikina-Pasig": {
+    "LRT 2 - Marikina-Pasig": {
         "systemLine": "LRT 2",
         "coordinates":  [14.620526945376305, 121.10027702959293],
-        "Antipolo": [20, 16]
+        "LRT 2 - Antipolo": [20, 16]
     },
 
-    "Antipolo": {
+    "LRT 2 - Antipolo": {
         "systemLine": "LRT 2",
         "coordinates": [14.625032724161391, 121.12140100749482]
     },
@@ -444,145 +444,145 @@
 
 
 
-    "North Avenue (MRT3)": {
+    "MRT 3 - North Avenue": {
         "systemLine": "MRT 3",
         "coordinates": [14.652195973329915, 121.03235849656674],
-        "Quezon Avenue (MRT3)": [13],
-        "GMA Kamuning": [13],
-        "Araneta Center-Cubao (MRT3)": [16],
-        "Santolan-Annapolis": [16],
-        "Ortigas (MRT3)": [20],
-        "Shaw Boulevard": [20],
-        "Boni": [20],
-        "Guadalupe (MRT3)": [24],
-        "Buendia (MRT3)": [24],
-        "Ayala (MRT3)": [24],
-        "Magallanes": [28],
-        "Taft Avenue (MRT3)": [28]
+        "MRT 3 - Quezon Avenue": [13],
+        "MRT 3 - GMA Kamuning": [13],
+        "MRT 3 - Araneta Center-Cubao": [16],
+        "MRT 3 - Santolan-Annapolis": [16],
+        "MRT 3 - Ortigas": [20],
+        "MRT 3 - Shaw Boulevard": [20],
+        "MRT 3 - Boni": [20],
+        "MRT 3 - Guadalupe": [24],
+        "MRT 3 - Buendia": [24],
+        "MRT 3 - Ayala": [24],
+        "MRT 3 - Magallanes": [28],
+        "MRT 3 - Taft Avenue": [28]
     },
 
-    "Quezon Avenue (MRT3)": {
+    "MRT 3 - Quezon Avenue": {
         "systemLine": "MRT 3",
         "coordinates": [14.642789503087306, 121.03852449406058],
-        "GMA Kamuning": [13],
-        "Araneta Center-Cubao (MRT3)": [13],
-        "Santolan-Annapolis": [16],
-        "Ortigas (MRT3)": [16],
-        "Shaw Boulevard": [20],
-        "Boni": [20],
-        "Guadalupe (MRT3)": [20],
-        "Buendia (MRT3)": [24],
-        "Ayala (MRT3)": [24],
-        "Magallanes": [24],
-        "Taft Avenue (MRT3)": [28]
+        "MRT 3 - GMA Kamuning": [13],
+        "MRT 3 - Araneta Center-Cubao": [13],
+        "MRT 3 - Santolan-Annapolis": [16],
+        "MRT 3 - Ortigas": [16],
+        "MRT 3 - Shaw Boulevard": [20],
+        "MRT 3 - Boni": [20],
+        "MRT 3 - Guadalupe": [20],
+        "MRT 3 - Buendia": [24],
+        "MRT 3 - Ayala": [24],
+        "MRT 3 - Magallanes": [24],
+        "MRT 3 - Taft Avenue": [28]
     },
 
-    "GMA Kamuning": {
+    "MRT 3 - GMA Kamuning": {
         "systemLine": "MRT 3",
         "coordinates": [14.635241704751078, 121.0433724531299],
-        "Araneta Center-Cubao (MRT3)": [13],
-        "Santolan-Annapolis": [13],
-        "Ortigas (MRT3)": [16],
-        "Shaw Boulevard": [16],
-        "Boni": [20],
-        "Guadalupe (MRT3)": [20],
-        "Buendia (MRT3)": [20],
-        "Ayala (MRT3)": [24],
-        "Magallanes": [24],
-        "Taft Avenue (MRT3)": [24]
+        "MRT 3 - Araneta Center-Cubao": [13],
+        "MRT 3 - Santolan-Annapolis": [13],
+        "MRT 3 - Ortigas": [16],
+        "MRT 3 - Shaw Boulevard": [16],
+        "MRT 3 - Boni": [20],
+        "MRT 3 - Guadalupe": [20],
+        "MRT 3 - Buendia": [20],
+        "MRT 3 - Ayala": [24],
+        "MRT 3 - Magallanes": [24],
+        "MRT 3 - Taft Avenue": [24]
     },
 
-    "Araneta Center-Cubao (MRT3)": {
+    "MRT 3 - Araneta Center-Cubao": {
         "systemLine": "MRT 3",
         "coordinates": [14.619488774800352, 121.05117017831017],
-        "Santolan-Annapolis": [13],
-        "Ortigas (MRT3)": [13],
-        "Shaw Boulevard": [16],
-        "Boni": [16],
-        "Guadalupe (MRT3)": [20],
-        "Buendia (MRT3)": [20],
-        "Ayala (MRT3)": [20],
-        "Magallanes": [24],
-        "Taft Avenue (MRT3)": [24]
+        "MRT 3 - Santolan-Annapolis": [13],
+        "MRT 3 - Ortigas": [13],
+        "MRT 3 - Shaw Boulevard": [16],
+        "MRT 3 - Boni": [16],
+        "MRT 3 - Guadalupe": [20],
+        "MRT 3 - Buendia": [20],
+        "MRT 3 - Ayala": [20],
+        "MRT 3 - Magallanes": [24],
+        "MRT 3 - Taft Avenue": [24]
     },
 
-    "Santolan-Annapolis": {
+    "MRT 3 - Santolan-Annapolis": {
         "systemLine": "MRT 3",
         "coordinates": [14.607813830405192, 121.05643608979177],
-        "Ortigas (MRT3)": [13],
-        "Shaw Boulevard": [13],
-        "Boni": [16],
-        "Guadalupe (MRT3)": [16],
-        "Buendia (MRT3)": [20],
-        "Ayala (MRT3)": [20],
-        "Magallanes": [20],
-        "Taft Avenue (MRT3)": [24]
+        "MRT 3 - Ortigas": [13],
+        "MRT 3 - Shaw Boulevard": [13],
+        "MRT 3 - Boni": [16],
+        "MRT 3 - Guadalupe": [16],
+        "MRT 3 - Buendia": [20],
+        "MRT 3 - Ayala": [20],
+        "MRT 3 - Magallanes": [20],
+        "MRT 3 - Taft Avenue": [24]
     },
 
-    "Ortigas (MRT3)": {
+    "MRT 3 - Ortigas": {
         "systemLine": "MRT 3",
         "coordinates": [14.587878487608144, 121.05669057622023],
-        "Shaw Boulevard": [13],
-        "Boni": [13],
-        "Guadalupe (MRT3)": [16],
-        "Buendia (MRT3)": [16],
-        "Ayala (MRT3)": [20],
-        "Magallanes": [20],
-        "Taft Avenue (MRT3)": [20]
+        "MRT 3 - Shaw Boulevard": [13],
+        "MRT 3 - Boni": [13],
+        "MRT 3 - Guadalupe": [16],
+        "MRT 3 - Buendia": [16],
+        "MRT 3 - Ayala": [20],
+        "MRT 3 - Magallanes": [20],
+        "MRT 3 - Taft Avenue": [20]
     },
 
-    "Shaw Boulevard": {
+    "MRT 3 - Shaw Boulevard": {
         "systemLine": "MRT 3",
         "coordinates": [14.581222446822242, 121.05360411261334],
-        "Boni": [13],
-        "Guadalupe (MRT3)": [13],
-        "Buendia (MRT3)": [16],
-        "Ayala (MRT3)": [16],
-        "Magallanes": [20],
-        "Taft Avenue (MRT3)": [20]
+        "MRT 3 - Boni": [13],
+        "MRT 3 - Guadalupe": [13],
+        "MRT 3 - Buendia": [16],
+        "MRT 3 - Ayala": [16],
+        "MRT 3 - Magallanes": [20],
+        "MRT 3 - Taft Avenue": [20]
     },
 
-    "Boni": {
+    "MRT 3 - Boni": {
         "systemLine": "MRT 3",
         "coordinates": [14.573794186884063, 121.04818243148969],
-        "Guadalupe (MRT3)": [13],
-        "Buendia (MRT3)": [13],
-        "Ayala (MRT3)": [16],
-        "Magallanes": [16],
-        "Taft Avenue (MRT3)": [20]
+        "MRT 3 - Guadalupe": [13],
+        "MRT 3 - Buendia": [13],
+        "MRT 3 - Ayala": [16],
+        "MRT 3 - Magallanes": [16],
+        "MRT 3 - Taft Avenue": [20]
     },
 
-    "Guadalupe (MRT3)": {
+    "MRT 3 - Guadalupe": {
         "systemLine": "MRT 3",
         "coordinates": [14.56670826426437, 121.04547443487894],
-        "Buendia (MRT3)": [13],
-        "Ayala (MRT3)": [13],
-        "Magallanes": [16],
-        "Taft Avenue (MRT3)": [16]
+        "MRT 3 - Buendia": [13],
+        "MRT 3 - Ayala": [13],
+        "MRT 3 - Magallanes": [16],
+        "MRT 3 - Taft Avenue": [16]
     },
 
-    "Buendia (MRT3)": {
+    "MRT 3 - Buendia": {
         "systemLine": "MRT 3",
         "coordinates": [14.55460059364354, 121.03451642310628],
-        "Ayala (MRT3)": [13],
-        "Magallanes": [13],
-        "Taft Avenue (MRT3)": [16]
+        "MRT 3 - Ayala": [13],
+        "MRT 3 - Magallanes": [13],
+        "MRT 3 - Taft Avenue": [16]
     },
 
-    "Ayala (MRT3)": {
+    "MRT 3 - Ayala": {
         "systemLine": "MRT 3",
         "coordinates": [14.549204298303684, 121.02797161482445],
-        "Magallanes": [13],
-        "Taft Avenue (MRT3)": [13]
+        "MRT 3 - Magallanes": [13],
+        "MRT 3 - Taft Avenue": [13]
     },
 
-    "Magallanes": {
+    "MRT 3 - Magallanes": {
         "systemLine": "MRT 3",
         "coordinates": [14.541871735109892, 121.01932352876085],
-        "Taft Avenue (MRT3)": [13]
+        "MRT 3 - Taft Avenue": [13]
     },
 
-    "Taft Avenue (MRT3)": {
+    "MRT 3 - Taft Avenue": {
         "systemLine": "MRT 3",
         "coordinates": [14.53767103081072, 121.00218199433715]
     },
@@ -593,337 +593,337 @@
 
 
 
-    "Monumento (Carousel)": {
+    "Carousel - Monumento": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 1,
         "coordinates": [14.65723676234265, 120.98625174871243],
-        "Bagong Barrio": [15, 15],
-        "Balintawak (Carousel)": [15, 15],
-        "Kaingin Road": [15, 15],
-        "Roosevelt": [15, 15],
-        "North Avenue (Carousel)": [15.75, 15.75],
-        "Quezon Avenue (Carousel)": [19.25, 19.25],
-        "Nepa Q-Mart": [23.50, 23.50],
-        "Main Avenue": [28.00, 28.25],
-        "Santolan (Carousel)": [29.75, 30],
-        "Ortigas (Carousel)": [36.50, 36.75],
-        "Guadalupe (Carousel)": [47.75, 43.25],
-        "Buendia (Carousel)": [48, 48.25],
-        "Ayala (Carousel)": [50.25, 50.50],
-        "Tramo": [58.75],
-        "Taft Avenue (Carousel)": [59.50, 60.25],
-        "Roxas Boulevard": [62, 62.50],
-        "MOA": [64.75],
-        "DFA/Starbucks": [68, 65.25],
-        "Ayala Malls Manila Bay/City of Dreams": [71.75, 66.50],
-        "PITX": [75.50, 73.00]
+        "Carousel - Bagong Barrio": [15, 15],
+        "Carousel - Balintawak": [15, 15],
+        "Carousel - Kaingin Road": [15, 15],
+        "Carousel - Roosevelt": [15, 15],
+        "Carousel - North Avenue": [15.75, 15.75],
+        "Carousel - Quezon Avenue": [19.25, 19.25],
+        "Carousel - Nepa Q-Mart": [23.50, 23.50],
+        "Carousel - Main Avenue": [28.00, 28.25],
+        "Carousel - Santolan": [29.75, 30],
+        "Carousel - Ortigas": [36.50, 36.75],
+        "Carousel - Guadalupe": [47.75, 43.25],
+        "Carousel - Buendia": [48, 48.25],
+        "Carousel - Ayala": [50.25, 50.50],
+        "Carousel - Tramo": [58.75],
+        "Carousel - Taft Avenue": [59.50, 60.25],
+        "Carousel - Roxas Boulevard": [62, 62.50],
+        "Carousel - MOA": [64.75],
+        "Carousel - DFA/Starbucks": [68, 65.25],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [71.75, 66.50],
+        "Carousel - PITX": [75.50, 73.00]
     },
 
-    "Bagong Barrio": {
+    "Carousel - Bagong Barrio": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 2,
         "coordinates": [14.658129054215442, 120.99835180966367],
-        "Balintawak (Carousel)": [15, 15],
-        "Kaingin Road": [15, 15],
-        "Roosevelt": [15, 15],
-        "North Avenue (Carousel)": [15, 15],
-        "Quezon Avenue (Carousel)": [15.75, 15.75],
-        "Nepa Q-Mart": [20, 20],
-        "Main Avenue": [24.50, 25],
-        "Santolan (Carousel)": [26.25, 26.75],
-        "Ortigas (Carousel)": [33, 36.75],
-        "Guadalupe (Carousel)": [39.50, 39.75],
-        "Buendia (Carousel)": [44.75, 45],
-        "Ayala (Carousel)": [47, 47.25],
-        "Tramo": [55.25],
-        "Taft Avenue (Carousel)": [56.25, 56.75],
-        "Roxas Boulevard": [58.50, 59],
-        "MOA": [61],
-        "DFA/Starbucks": [64.75, 61.75],
-        "Ayala Malls Manila Bay/City of Dreams": [66.75, 63.25],
-        "PITX": [70.50, 69.50]
+        "Carousel - Balintawak": [15, 15],
+        "Carousel - Kaingin Road": [15, 15],
+        "Carousel - Roosevelt": [15, 15],
+        "Carousel - North Avenue": [15, 15],
+        "Carousel - Quezon Avenue": [15.75, 15.75],
+        "Carousel - Nepa Q-Mart": [20, 20],
+        "Carousel - Main Avenue": [24.50, 25],
+        "Carousel - Santolan": [26.25, 26.75],
+        "Carousel - Ortigas": [33, 36.75],
+        "Carousel - Guadalupe": [39.50, 39.75],
+        "Carousel - Buendia": [44.75, 45],
+        "Carousel - Ayala": [47, 47.25],
+        "Carousel - Tramo": [55.25],
+        "Carousel - Taft Avenue": [56.25, 56.75],
+        "Carousel - Roxas Boulevard": [58.50, 59],
+        "Carousel - MOA": [61],
+        "Carousel - DFA/Starbucks": [64.75, 61.75],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [66.75, 63.25],
+        "Carousel - PITX": [70.50, 69.50]
     },
 
-    "Balintawak (Carousel)": {
+    "Carousel - Balintawak": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 3,
         "coordinates": [14.65797863075305, 121.00498334498165],
-        "Kaingin Road": [15, 15],
-        "Roosevelt": [15, 15],
-        "North Avenue (Carousel)": [15, 15],
-        "Quezon Avenue (Carousel)": [15, 15],
-        "Nepa Q-Mart": [18.25, 18.25],
-        "Main Avenue": [22.75, 23],
-        "Santolan (Carousel)": [24.50, 24.75],
-        "Ortigas (Carousel)": [31.25, 31.50],
-        "Guadalupe (Carousel)": [37.50, 38],
-        "Buendia (Carousel)": [42.75, 43],
-        "Ayala (Carousel)": [45, 45.25],
-        "Tramo": [53.50],
-        "Taft Avenue (Carousel)": [54.25, 55],
-        "Roxas Boulevard": [56.75, 57.25],
-        "MOA": [59],
-        "DFA/Starbucks": [62.75, 60],
-        "Ayala Malls Manila Bay/City of Dreams": [65, 61.25],
-        "PITX": [68.75, 67.75]
+        "Carousel - Kaingin Road": [15, 15],
+        "Carousel - Roosevelt": [15, 15],
+        "Carousel - North Avenue": [15, 15],
+        "Carousel - Quezon Avenue": [15, 15],
+        "Carousel - Nepa Q-Mart": [18.25, 18.25],
+        "Carousel - Main Avenue": [22.75, 23],
+        "Carousel - Santolan": [24.50, 24.75],
+        "Carousel - Ortigas": [31.25, 31.50],
+        "Carousel - Guadalupe": [37.50, 38],
+        "Carousel - Buendia": [42.75, 43],
+        "Carousel - Ayala": [45, 45.25],
+        "Carousel - Tramo": [53.50],
+        "Carousel - Taft Avenue": [54.25, 55],
+        "Carousel - Roxas Boulevard": [56.75, 57.25],
+        "Carousel - MOA": [59],
+        "Carousel - DFA/Starbucks": [62.75, 60],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [65, 61.25],
+        "Carousel - PITX": [68.75, 67.75]
     },
 
-    "Kaingin Road": {
+    "Carousel - Kaingin Road": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 4,
         "coordinates": [14.658310779329534, 121.01159230799453],
-        "Roosevelt": [15, 15],
-        "North Avenue (Carousel)": [15, 15],
-        "Quezon Avenue (Carousel)": [15, 15],
-        "Nepa Q-Mart": [16.25, 16.25],
-        "Main Avenue": [20.75, 21],
-        "Santolan (Carousel)": [22.50, 22.75],
-        "Ortigas (Carousel)": [29.25, 29.50],
-        "Guadalupe (Carousel)": [35.75, 36],
-        "Buendia (Carousel)": [40.75, 41.25],
-        "Ayala (Carousel)": [43.25, 43.50],
-        "Tramo": [51.50],
-        "Taft Avenue (Carousel)": [52.50, 53],
-        "Roxas Boulevard": [54.75, 55.25],
-        "MOA": [57.25],
-        "DFA/Starbucks": [60.75, 58],
-        "Ayala Malls Manila Bay/City of Dreams": [63, 59.25],
-        "PITX": [66.75, 65.75]
+        "Carousel - Roosevelt": [15, 15],
+        "Carousel - North Avenue": [15, 15],
+        "Carousel - Quezon Avenue": [15, 15],
+        "Carousel - Nepa Q-Mart": [16.25, 16.25],
+        "Carousel - Main Avenue": [20.75, 21],
+        "Carousel - Santolan": [22.50, 22.75],
+        "Carousel - Ortigas": [29.25, 29.50],
+        "Carousel - Guadalupe": [35.75, 36],
+        "Carousel - Buendia": [40.75, 41.25],
+        "Carousel - Ayala": [43.25, 43.50],
+        "Carousel - Tramo": [51.50],
+        "Carousel - Taft Avenue": [52.50, 53],
+        "Carousel - Roxas Boulevard": [54.75, 55.25],
+        "Carousel - MOA": [57.25],
+        "Carousel - DFA/Starbucks": [60.75, 58],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [63, 59.25],
+        "Carousel - PITX": [66.75, 65.75]
     },
   
-    "Roosevelt": {
+    "Carousel - Roosevelt": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 5,
         "coordinates": [14.658518371934086, 121.01978913874424],
-        "North Avenue (Carousel)": [15, 15],
-        "Quezon Avenue (Carousel)": [15, 15],
-        "Nepa Q-Mart": [15, 15],
-        "Main Avenue": [18.50, 18.75],
-        "Santolan (Carousel)": [20.25, 20.50],
-        "Ortigas (Carousel)": [27, 27.25],
-        "Guadalupe (Carousel)": [33.25, 33.75],
-        "Buendia (Carousel)": [38.50, 38.75],
-        "Ayala (Carousel)": [40.75, 41],
-        "Tramo": [49.25],
-        "Taft Avenue (Carousel)": [50, 50.50],
-        "Roxas Boulevard": [52.50, 53],
-        "MOA": [54.75],
-        "DFA/Starbucks": [58.50, 55.50],
-        "Ayala Malls Manila Bay/City of Dreams": [60.75, 57],
-        "PITX": [64.50, 63.50]
+        "Carousel - North Avenue": [15, 15],
+        "Carousel - Quezon Avenue": [15, 15],
+        "Carousel - Nepa Q-Mart": [15, 15],
+        "Carousel - Main Avenue": [18.50, 18.75],
+        "Carousel - Santolan": [20.25, 20.50],
+        "Carousel - Ortigas": [27, 27.25],
+        "Carousel - Guadalupe": [33.25, 33.75],
+        "Carousel - Buendia": [38.50, 38.75],
+        "Carousel - Ayala": [40.75, 41],
+        "Carousel - Tramo": [49.25],
+        "Carousel - Taft Avenue": [50, 50.50],
+        "Carousel - Roxas Boulevard": [52.50, 53],
+        "Carousel - MOA": [54.75],
+        "Carousel - DFA/Starbucks": [58.50, 55.50],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [60.75, 57],
+        "Carousel - PITX": [64.50, 63.50]
     },
 
-    "North Avenue (Carousel)": {
+    "Carousel - North Avenue": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 6,
         "coordinates": [14.652041389865037, 121.03300706476966],
-        "Quezon Avenue (Carousel)": [15, 15],
-        "Nepa Q-Mart": [15, 15],
-        "Main Avenue": [15, 15],
-        "Santolan (Carousel)": [15.75, 16],
-        "Ortigas (Carousel)": [22.50, 22.75],
-        "Guadalupe (Carousel)": [28.75, 29],
-        "Buendia (Carousel)": [34, 34.25],
-        "Ayala (Carousel)": [36.25, 36.50],
-        "Tramo": [44.75],
-        "Taft Avenue (Carousel)": [45.50, 46],
-        "Roxas Boulevard": [48, 48.50],
-        "MOA": [50.25],
-        "DFA/Starbucks": [54, 51],
-        "Ayala Malls Manila Bay/City of Dreams": [56.25, 52.50],
-        "PITX": [60, 59]
+        "Carousel - Quezon Avenue": [15, 15],
+        "Carousel - Nepa Q-Mart": [15, 15],
+        "Carousel - Main Avenue": [15, 15],
+        "Carousel - Santolan": [15.75, 16],
+        "Carousel - Ortigas": [22.50, 22.75],
+        "Carousel - Guadalupe": [28.75, 29],
+        "Carousel - Buendia": [34, 34.25],
+        "Carousel - Ayala": [36.25, 36.50],
+        "Carousel - Tramo": [44.75],
+        "Carousel - Taft Avenue": [45.50, 46],
+        "Carousel - Roxas Boulevard": [48, 48.50],
+        "Carousel - MOA": [50.25],
+        "Carousel - DFA/Starbucks": [54, 51],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [56.25, 52.50],
+        "Carousel - PITX": [60, 59]
     },
 
-    "Quezon Avenue (Carousel)": {
+    "Carousel - Quezon Avenue": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 7,
         "coordinates": [14.64236707931128, 121.03935853571684],
-        "Nepa Q-Mart": [15, 15],
-        "Main Avenue": [15, 15],
-        "Santolan (Carousel)": [15, 15],
-        "Ortigas (Carousel)": [19, 19.25],
-        "Guadalupe (Carousel)": [25.50, 25.75],
-        "Buendia (Carousel)": [30.75, 30.75],
-        "Ayala (Carousel)": [33, 33.25],
-        "Tramo": [41.25],
-        "Taft Avenue (Carousel)": [42.25, 42.75],
-        "Roxas Boulevard": [44.50, 45],
-        "MOA": [47],
-        "DFA/Starbucks": [50.50, 47.75],
-        "Ayala Malls Manila Bay/City of Dreams": [52.75, 49],
-        "PITX": [56.50, 55.50]
+        "Carousel - Nepa Q-Mart": [15, 15],
+        "Carousel - Main Avenue": [15, 15],
+        "Carousel - Santolan": [15, 15],
+        "Carousel - Ortigas": [19, 19.25],
+        "Carousel - Guadalupe": [25.50, 25.75],
+        "Carousel - Buendia": [30.75, 30.75],
+        "Carousel - Ayala": [33, 33.25],
+        "Carousel - Tramo": [41.25],
+        "Carousel - Taft Avenue": [42.25, 42.75],
+        "Carousel - Roxas Boulevard": [44.50, 45],
+        "Carousel - MOA": [47],
+        "Carousel - DFA/Starbucks": [50.50, 47.75],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [52.75, 49],
+        "Carousel - PITX": [56.50, 55.50]
     },
 
-    "Nepa Q-Mart": {
+    "Carousel - Nepa Q-Mart": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 8,
         "coordinates": [14.629785685548354, 121.04686872095873],
-        "Main Avenue": [15, 15],
-        "Santolan (Carousel)": [15, 15],
-        "Ortigas (Carousel)": [15, 15],
-        "Guadalupe (Carousel)": [21, 21.50],
-        "Buendia (Carousel)": [26.25, 26.50],
-        "Ayala (Carousel)": [28.50, 29],
-        "Tramo": [37],
-        "Taft Avenue (Carousel)": [38, 38.50],
-        "Roxas Boulevard": [40.25, 40.75],
-        "MOA": [42.75],
-        "DFA/Starbucks": [46.25, 43.50],
-        "Ayala Malls Manila Bay/City of Dreams": [48.50, 44.75],
-        "PITX": [52.25, 51.25]
+        "Carousel - Main Avenue": [15, 15],
+        "Carousel - Santolan": [15, 15],
+        "Carousel - Ortigas": [15, 15],
+        "Carousel - Guadalupe": [21, 21.50],
+        "Carousel - Buendia": [26.25, 26.50],
+        "Carousel - Ayala": [28.50, 29],
+        "Carousel - Tramo": [37],
+        "Carousel - Taft Avenue": [38, 38.50],
+        "Carousel - Roxas Boulevard": [40.25, 40.75],
+        "Carousel - MOA": [42.75],
+        "Carousel - DFA/Starbucks": [46.25, 43.50],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [48.50, 44.75],
+        "Carousel - PITX": [52.25, 51.25]
     },
 
-    "Main Avenue": {
+    "Carousel - Main Avenue": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 9,
         "coordinates": [14.614919610563721, 121.05382100672523],
-        "Santolan (Carousel)": [15, 15],
-        "Ortigas (Carousel)": [15, 15],
-        "Guadalupe (Carousel)": [15, 16.75],
-        "Buendia (Carousel)": [20, 21.75],
-        "Ayala (Carousel)": [22.25, 24],
-        "Tramo": [30.75],
-        "Taft Avenue (Carousel)": [31.50, 33.75],
-        "Roxas Boulevard": [34, 36],
-        "MOA": [36.25],
-        "DFA/Starbucks": [40, 38.75],
-        "Ayala Malls Manila Bay/City of Dreams": [42.25, 40],
-        "PITX": [46, 46.50]
+        "Carousel - Santolan": [15, 15],
+        "Carousel - Ortigas": [15, 15],
+        "Carousel - Guadalupe": [15, 16.75],
+        "Carousel - Buendia": [20, 21.75],
+        "Carousel - Ayala": [22.25, 24],
+        "Carousel - Tramo": [30.75],
+        "Carousel - Taft Avenue": [31.50, 33.75],
+        "Carousel - Roxas Boulevard": [34, 36],
+        "Carousel - MOA": [36.25],
+        "Carousel - DFA/Starbucks": [40, 38.75],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [42.25, 40],
+        "Carousel - PITX": [46, 46.50]
     },
 
-    "Santolan (Carousel)": {
+    "Carousel - Santolan": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 10,
         "coordinates": [14.609687177382643, 121.05626718134691],
-        "Ortigas (Carousel)": [15, 15],
-        "Guadalupe (Carousel)": [15, 15],
-        "Buendia (Carousel)": [15, 20],
-        "Ayala (Carousel)": [15.75, 22.25],
-        "Tramo": [24],
-        "Taft Avenue (Carousel)": [25, 31.75],
-        "Roxas Boulevard": [27.25, 34.25],
-        "MOA": [29.75],
-        "DFA/Starbucks": [33.25, 36.75],
-        "Ayala Malls Manila Bay/City of Dreams": [35.50, 38.25],
-        "PITX": [39.25, 44.75]
+        "Carousel - Ortigas": [15, 15],
+        "Carousel - Guadalupe": [15, 15],
+        "Carousel - Buendia": [15, 20],
+        "Carousel - Ayala": [15.75, 22.25],
+        "Carousel - Tramo": [24],
+        "Carousel - Taft Avenue": [25, 31.75],
+        "Carousel - Roxas Boulevard": [27.25, 34.25],
+        "Carousel - MOA": [29.75],
+        "Carousel - DFA/Starbucks": [33.25, 36.75],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [35.50, 38.25],
+        "Carousel - PITX": [39.25, 44.75]
     },
 
-    "Ortigas (Carousel)": {
+    "Carousel - Ortigas": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 11,
         "coordinates": [14.58784249985451, 121.05652467341231],
-        "Guadalupe (Carousel)": [15, 15],
-        "Buendia (Carousel)": [15, 15],
-        "Ayala (Carousel)": [15, 15.50],
-        "Tramo": [17.50],
-        "Taft Avenue (Carousel)": [18.50, 25.25],
-        "Roxas Boulevard": [20.75, 27.50],
-        "MOA": [23.25],
-        "DFA/Starbucks": [27, 30.25],
-        "Ayala Malls Manila Bay/City of Dreams": [29, 31.50],
-        "PITX": [33, 38]
+        "Carousel - Guadalupe": [15, 15],
+        "Carousel - Buendia": [15, 15],
+        "Carousel - Ayala": [15, 15.50],
+        "Carousel - Tramo": [17.50],
+        "Carousel - Taft Avenue": [18.50, 25.25],
+        "Carousel - Roxas Boulevard": [20.75, 27.50],
+        "Carousel - MOA": [23.25],
+        "Carousel - DFA/Starbucks": [27, 30.25],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [29, 31.50],
+        "Carousel - PITX": [33, 38]
     },
 
-    "Guadalupe (Carousel)": {
+    "Carousel - Guadalupe": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 12,
         "coordinates": [14.56911083151502, 121.04605332941813],
-        "Buendia (Carousel)": [15, 15],
-        "Ayala (Carousel)": [15, 15],
-        "Tramo": [15],
-        "Taft Avenue (Carousel)": [15, 18.75],
-        "Roxas Boulevard": [15.50, 21],
-        "MOA": [18],
-        "DFA/Starbucks": [21.75, 23.75],
-        "Ayala Malls Manila Bay/City of Dreams": [23.75, 25],
-        "PITX": [27.75, 31.50]
+        "Carousel - Buendia": [15, 15],
+        "Carousel - Ayala": [15, 15],
+        "Carousel - Tramo": [15],
+        "Carousel - Taft Avenue": [15, 18.75],
+        "Carousel - Roxas Boulevard": [15.50, 21],
+        "Carousel - MOA": [18],
+        "Carousel - DFA/Starbucks": [21.75, 23.75],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [23.75, 25],
+        "Carousel - PITX": [27.75, 31.50]
     },
 
-    "Buendia (Carousel)": {
+    "Carousel - Buendia": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 13,
         "coordinates": [14.55540372407569, 121.03747026057057],
-        "Ayala (Carousel)": [15, 15],
-        "Tramo": [15],
-        "Taft Avenue (Carousel)": [15, 15],
-        "Roxas Boulevard": [15, 15.75],
-        "MOA": [15.75],
-        "DFA/Starbucks": [19.50, 18.50],
-        "Ayala Malls Manila Bay/City of Dreams": [21.50, 20],
-        "PITX": [25.50, 26.50]
+        "Carousel - Ayala": [15, 15],
+        "Carousel - Tramo": [15],
+        "Carousel - Taft Avenue": [15, 15],
+        "Carousel - Roxas Boulevard": [15, 15.75],
+        "Carousel - MOA": [15.75],
+        "Carousel - DFA/Starbucks": [19.50, 18.50],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [21.50, 20],
+        "Carousel - PITX": [25.50, 26.50]
     },
 
-    "Ayala (Carousel)": {
+    "Carousel - Ayala": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 14,
         "coordinates": [14.550005605268618, 121.0284335904759],
-        "Tramo": [15],
-        "Taft Avenue (Carousel)": [15, 15],
-        "Roxas Boulevard": [15, 15],
-        "MOA": [15],
-        "DFA/Starbucks": [15, 16.25],
-        "Ayala Malls Manila Bay/City of Dreams": [15, 17.75],
-        "PITX": [17, 24]
+        "Carousel - Tramo": [15],
+        "Carousel - Taft Avenue": [15, 15],
+        "Carousel - Roxas Boulevard": [15, 15],
+        "Carousel - MOA": [15],
+        "Carousel - DFA/Starbucks": [15, 16.25],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [15, 17.75],
+        "Carousel - PITX": [17, 24]
     },
 
-    "Tramo": {
+    "Carousel - Tramo": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 15,
         "coordinates": [14.538089383394048, 121.00344233535586],
-        "Taft Avenue (Carousel)": [15],
-        "Roxas Boulevard": [15],
-        "MOA": [15],
-        "DFA/Starbucks": [15],
-        "Ayala Malls Manila Bay/City of Dreams": [15],
-        "PITX": [16]
+        "Carousel - Taft Avenue": [15, 0],
+        "Carousel - Roxas Boulevard": [15, 0],
+        "Carousel - MOA": [15, 0],
+        "Carousel - DFA/Starbucks": [15, 0],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [15, 0],
+        "Carousel - PITX": [16, 0]
     },
 
-    "Taft Avenue (Carousel)": {
+    "Carousel - Taft Avenue": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 16,
         "coordinates": [14.537832076974514, 120.99970759960841],
-        "Roxas Boulevard": [15, 15],
-        "MOA": [15],
-        "DFA/Starbucks": [15, 15],
-        "Ayala Malls Manila Bay/City of Dreams": [15, 15],
-        "PITX": [15, 15]
+        "Carousel - Roxas Boulevard": [15, 15],
+        "Carousel - MOA": [15],
+        "Carousel - DFA/Starbucks": [15, 15],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [15, 15],
+        "Carousel - PITX": [15, 15]
     },
 
-    "Roxas Boulevard": {
+    "Carousel - Roxas Boulevard": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 17,
         "coordinates": [14.537333516287445, 120.99225912380115],
-        "MOA": [15],
-        "DFA/Starbucks": [15, 15],
-        "Ayala Malls Manila Bay/City of Dreams": [15, 15],
-        "PITX": [15, 15]
+        "Carousel - MOA": [15],
+        "Carousel - DFA/Starbucks": [15, 15],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [15, 15],
+        "Carousel - PITX": [15, 15]
     },
     
-    "MOA": {
+    "Carousel - MOA": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 18,
         "coordinates": [14.535609551646576, 120.98373967321723],
-        "DFA/Starbucks": [15],
-        "Ayala Malls Manila Bay/City of Dreams": [15],
-        "PITX": [15]
+        "Carousel - DFA/Starbucks": [15, 0],
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [15, 0],
+        "Carousel - PITX": [15, 0]
     },
 
-    "DFA/Starbucks": {
+    "Carousel - DFA/Starbucks": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 19,
         "coordinates": [14.53024315251824, 120.98962687486458],
-        "Ayala Malls Manila Bay/City of Dreams": [15, 15],
-        "PITX": [15, 15]
+        "Carousel - Ayala Malls Manila Bay/City of Dreams": [15, 15],
+        "Carousel - PITX": [15, 15]
     },
 
-    "Ayala Malls Manila Bay/City of Dreams": {
+    "Carousel - Ayala Malls Manila Bay/City of Dreams": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 20,
         "coordinates":[14.524149419075057, 120.9907232345767] ,
-        "PITX": [15, 15]
+        "Carousel - PITX": [15, 15]
     },
     
-    "PITX": {
+    "Carousel - PITX": {
         "systemLine": "EDSA Carousel",
         "stopOrder": 21,
         "coordinates": [14.507962038454975, 120.99126580235031]

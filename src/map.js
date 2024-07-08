@@ -3,6 +3,11 @@ import 'leaflet-polylinedecorator';
 import homePinImg from './assets/pin-map-origin.svg'
 import destPinImg from './assets/pin-map-dest.svg'
 import defPinImg from './assets/pin-map-stop.svg'
+import homeImg from './assets/pin-origin.svg'
+import destImg from './assets/pin-destination.svg'
+
+import collapseUp from './assets/collapse-up.svg'
+import collapseDown from './assets/collapse-down.svg'
 
 import stationData from './assets/stationData.json';
 import findAllRoutes from './getRoutes';
@@ -109,7 +114,7 @@ function plotRoute(route){
             const y = stationData[obj].coordinates[1];
             let marker;
             if(i == 0){
-                marker = L.marker([x,y], {icon: homeIcon}).addTo(map).bindPopup(`Origin: ${station}`, {closeOnClick: false, autoClose: false});
+                marker = L.marker([x,y], {icon: homeIcon}).addTo(map).bindPopup(`Origin: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
             } else if(i == route.length - 1) {
                 marker =  L.marker([x,y], {icon: destIcon}).addTo(map).bindPopup(`Destination: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
             } else {
@@ -158,9 +163,15 @@ function plotRoute(route){
 //get result 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
 const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
+routes.forEach((route, i) => {
+    route.id = i+1; 
+}); 
+console.log(routes);
+
+let currentRoute = null; 
 
 //display results 
-const routeOutput = document.querySelector('#output'); 
+const routeOutput = document.querySelector('#output-results'); 
 displayRoutes (routes, sortInput);
 
 
@@ -169,13 +180,19 @@ function createRouteNode(route, index){
     const fair = route.finalTotalFair; 
     const travelTime = route.finalTravelTime; 
     const stationTrans = route.numStations; 
+    const routeId = route.id; 
 
     const nodeBtn = document.createElement('button'); 
     nodeBtn.className = 'route-result'; 
+    if(currentRoute == routeId){
+        nodeBtn.classList.add('route-selected');
+    } else {
+        nodeBtn.classList.add('route-unselected');
+    }
     nodeBtn.id = `route-${index}`;
 
     const routeName = document.createElement('p'); 
-    distance == 0 ? routeName.textContent = `Route ${index} : Walking Distance`: routeName.textContent = `Route ${index} : ${distance} km`;
+    distance == 0 ? routeName.textContent = `Route ${index + 1} : Walking Distance`: routeName.textContent = `Route ${index + 1} : ${distance} km`;
     routeName.className = 'route-name';
     nodeBtn.appendChild(routeName);
 
@@ -207,9 +224,98 @@ function createRouteNode(route, index){
 
     routeOutput.appendChild(nodeBtn); 
 
-    nodeBtn.addEventListener('click', () => {
+    nodeBtn.addEventListener('click', () => { 
+        //highlight chosen route
+        let selectedNode = document.querySelector('.route-selected'); 
+        if(selectedNode){
+            selectedNode.classList.remove('route-selected');
+            selectedNode.classList.add('route-unselected');
+        }
+        nodeBtn.classList.add('route-selected');
+        currentRoute = routeId; 
         plotRoute(route);
+        createInfoNode(route); 
     });
+}
+
+
+function createInfoNode(route){
+
+    function removePrev(){
+        const infoContent = document.querySelector('#info-content'); 
+        if (infoContent.firstElementChild){
+            infoContent.removeChild(infoContent.firstElementChild)
+        };
+    }
+
+    removePrev(); 
+
+    const oldInfoPanel = document.querySelector('#info-panel'); 
+    const newInfoPanel = oldInfoPanel.cloneNode(true); 
+    oldInfoPanel.parentNode.replaceChild(newInfoPanel, oldInfoPanel);
+    newInfoPanel.style.visibility = "unset"; 
+
+    const infoBtn = document.querySelector('#info-header');
+    const btnImg = document.querySelector('#info-header-img');
+    let isClicked = true;
+
+    infoBtn.addEventListener('click', () => {
+        if(isClicked){
+            isClicked = false; 
+            btnImg.src = collapseUp; 
+            showRouteInfo(route);
+        } else {
+            isClicked = true; 
+            btnImg.src = collapseDown; 
+            removePrev();  
+        }
+    }); 
+
+}
+
+function showRouteInfo(route){
+    const infoContent = document.querySelector('#info-content'); 
+
+    const list = document.createElement('div'); 
+    list.id = 'info-content-list'; 
+
+    const stopList = document.createElement('ul');
+
+    route = route.route; 
+
+    let destNode = false; 
+
+    function createMainNode(imgSrc, station){
+        const containerNode = document.createElement('div');
+        containerNode.className = 'info-main'
+        const icon = document.createElement('img'); 
+        const text = document.createElement('p'); 
+        icon.src = imgSrc; 
+
+        text.textContent = `${station}`; 
+        containerNode.appendChild(icon); 
+        containerNode.appendChild(text); 
+
+        return containerNode;
+    }
+
+    route.forEach((station, i) => {
+        if(i == 0){
+            const originNode = createMainNode(homeImg, station);
+            list.appendChild(originNode); 
+        } else if(route.length > 1 && i == route.length-1) {
+            destNode = createMainNode(destImg, station); 
+        } else {
+            const listItem = document.createElement('li'); 
+            listItem.textContent = `${station}`;
+            stopList.appendChild(listItem); 
+        }
+    })
+
+    list.appendChild(stopList); 
+    if(destNode) list.appendChild(destNode); 
+
+    infoContent.appendChild(list);
 }
 
 //get routes button 
@@ -227,10 +333,11 @@ submitBtn.addEventListener('click', () => {
 //sort options
 const sortSelected = document.querySelector('#sort-select');
 sortSelected.addEventListener('change', () => {
-    const output = document.getElementById("output");
+
+    const output = document.getElementById("output-results");
     const nodesArr = Array.from(output.children);
 
-    for (let node = 1; node < nodesArr.length; node++) {
+    for (let node = 0; node < nodesArr.length; node++) {
         output.removeChild(nodesArr[node]);
     }
 
@@ -259,3 +366,20 @@ function displayRoutes (paths, sortType) {
         createRouteNode(route, i); 
     });
 } 
+
+//sort swap
+const sortSwapBtn = document.querySelector('#sort-swap');
+sortSwapBtn.addEventListener('click', () => {
+    const output = document.getElementById("output-results");
+    const routeNodes = Array.from(output.children); 
+    console.log(routeNodes)
+    for (let i = 0; i < Math.floor((routeNodes.length)/2); i++){
+        const curr = routeNodes[i]; 
+        const target = routeNodes[routeNodes.length-1-i]
+        
+        const currSibling = curr.nextSibling; 
+        const targetSibling = target.nextSibling; 
+        output.insertBefore(curr, targetSibling); 
+        output.insertBefore(target, currSibling); 
+    }
+})

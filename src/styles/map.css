@@ -85,7 +85,7 @@ main{
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    height: 100%;
+    height: calc(100vh - 5em);
     overflow:hidden;
 
 }
@@ -134,13 +134,13 @@ main{
     width: 75%;
 }
 
-#origin-pin{
+/* #origin-pin{
     filter: brightness(0) saturate(100%) invert(18%) sepia(18%) saturate(7119%) hue-rotate(199deg) brightness(92%) contrast(95%);
 }
 
 #destination-pin{
     filter: brightness(0) saturate(100%) invert(24%) sepia(35%) saturate(4057%) hue-rotate(342deg) brightness(86%) contrast(117%);
-}
+} */
 
 @media only screen and (min-width: 401px) and (max-width: 450px) {
     .station-select select{
@@ -185,14 +185,14 @@ main{
 .routes-btn{
     background: transparent;
     border-radius: 1em; 
-    border: 1px solid #0e3e7c ; 
+    border: 1px solid #060641; 
     width: fit-content;
     font-size: 1em;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 .routes-btn:hover{
-    background: #0e3e7c;
+    background: #060641;
     border-color: white;
     color: white;
 }
@@ -221,11 +221,11 @@ main{
 /* results sidebar */
 
 #output{
-    margin: 0 0 1em 0;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    height: auto;
+    overflow: hidden; 
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .output-header{
@@ -233,6 +233,14 @@ main{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    box-sizing: border-box;
+}
+
+#output-results{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
     box-sizing: border-box;
 }
 
@@ -301,29 +309,28 @@ main{
 }
 
 .route-result{
-    background-color: transparent;
     font-size: medium;
     border: none;
     display: flex;
     flex-direction: column;
     padding: 0.5em;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    height: 100%;
+    height: fit-content;
 }
 
 .route-result:hover{
-    background-color: #0e3e7c;
-    color: white;
+    background-color: #06064124;
+    color: black;
 }
 
 .route-name{
     font-size: smaller;
     font-style: italic;
-    color:rgba(0, 0, 0, 0.527);
+    color:#00000086;
 }
 
 .route-result:hover .route-name{
-    color: white;
+    color: black;
 }
 
 .route-info{
@@ -333,6 +340,19 @@ main{
 
 .route-price, .route-transfers, .route-time{
     font-weight: bold;
+}
+
+.route-unselected{
+    background-color: transparent;
+}
+
+.route-selected{
+    background-color: #060641; 
+    color: white;  
+}
+
+.route-selected .route-name{
+    color: white;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 900px) {
@@ -353,6 +373,81 @@ main{
     }
 }
 
+/* output mapbar */
+#info-panel { 
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-height: 80%;
+    width: 20%; 
+    overflow-y: hidden;
+    position: fixed;
+    top: 6em;
+    right: 2em;
+    background-color: white;
+    z-index: 99999999;
+    border-radius: 1em; 
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    margin: 0em;
+    visibility: hidden;
+}
+
+#info-header{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+}
+
+#info-header img{
+    width: 1.5em;
+}
+
+#info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+    overflow-y: auto; 
+}
+
+.info-main{
+    margin: 0 1em 1em 1em;
+    display: flex; 
+    gap: 0.5em; 
+    align-items: center;
+}
+
+.info-main img{
+    width: 1.5em; 
+}
+
+#info-content ul{
+    border-left: dotted black 4px;
+    padding: 0 1em 0 1em;
+    margin-left: 3em;
+    list-style:none;
+}
+
+#info-content li{
+    margin-bottom: 0.5em;
+}
+
+
+#map {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
 /* scrollbar */
 
 /* width */
@@ -367,7 +462,7 @@ main{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #0e3e7c; 
+    background: #060641; 
   }
   
   /* Handle on hover */
