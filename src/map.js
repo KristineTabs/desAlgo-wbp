@@ -317,7 +317,7 @@ sortSelected.addEventListener('change', () => {
     const output = document.getElementById("output-results");
     const nodesArr = Array.from(output.children);
 
-    for (let node = 1; node < nodesArr.length; node++) {
+    for (let node = 0; node < nodesArr.length; node++) {
         output.removeChild(nodesArr[node]);
     }
 
