@@ -217,7 +217,7 @@ function createRouteNode(route, index){
     routeExtraText2.textContent = 'approx.'; 
     const routeTime= document.createElement('p'); 
     routeTime.className = 'route-time';
-    routeTime.textContent = `${travelTime} minutes`
+    travelTime < 60? routeTime.textContent = `${travelTime} minutes` : travelTime % 60 != 0? routeTime.textContent = `${Math.floor(travelTime / 60)} hour/s and ${travelTime % 60} minute/s` : routeTime.textContent = `${Math.floor(travelTime / 60)} hour/s`;
     routeTimeInfo.appendChild(routeExtraText2);
     routeTimeInfo.appendChild(routeTime); 
     nodeBtn.appendChild(routeTimeInfo); 
