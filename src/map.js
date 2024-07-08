@@ -3,6 +3,11 @@ import 'leaflet-polylinedecorator';
 import homePinImg from './assets/pin-map-origin.svg'
 import destPinImg from './assets/pin-map-dest.svg'
 import defPinImg from './assets/pin-map-stop.svg'
+import homeImg from './assets/pin-origin.svg'
+import destImg from './assets/pin-destination.svg'
+
+import collapseUp from './assets/collapse-up.svg'
+import collapseDown from './assets/collapse-down.svg'
 
 import stationData from './assets/stationData.json';
 import findAllRoutes from './getRoutes';
@@ -161,7 +166,7 @@ const routes = findAllRoutes(originInput, destInput, typeInput, discountBool);
 console.log('No. Possible Routes: ' + routes.length);
 
 //display results 
-const routeOutput = document.querySelector('#output'); 
+const routeOutput = document.querySelector('#output-results'); 
 displayRoutes (routes, sortInput);
 
 
@@ -209,38 +214,89 @@ function createRouteNode(route, index){
     routeOutput.appendChild(nodeBtn); 
 
     nodeBtn.addEventListener('click', () => { 
-        
         plotRoute(route);
-
-        //places or removes route sequence info
-        const mapOutput = document.getElementById("mapBar");
-        if (mapOutput.children.length > 1) {
-            mapOutput.removeChild(mapOutput.children[0]);
-        }
-        
-        const oldInfoBtn = document.querySelector('#route-info');
-        const newInfoBtn = oldInfoBtn.cloneNode(true);
-        oldInfoBtn.parentNode.replaceChild(newInfoBtn, oldInfoBtn);
-        
-        let isClicked = true;
-        newInfoBtn.addEventListener('click', routePop);
-
-        //function to toggle route info button
-        function routePop () {
-            if(isClicked) {
-                const routeSeq = document.createElement('div');
-                routeSeq.id = 'seqID';
-                routeSeq.className = 'routeseq';
-                routeSeq.innerHTML = 'Route Sequence: <br><br> => ' + route.route.join("<br> => ");
-                
-                mapOutput.insertBefore(routeSeq, mapOutput.firstChild);
-            }
-            else {
-                mapOutput.removeChild(mapOutput.children[0]);
-            }
-            isClicked = !isClicked;
-        }
+        createInfoNode(route); 
     });
+}
+
+
+function createInfoNode(route){
+
+    function removePrev(){
+        const infoContent = document.querySelector('#info-content'); 
+        if (infoContent.firstElementChild){
+            infoContent.removeChild(infoContent.firstElementChild)
+        };
+    }
+
+    removePrev(); 
+
+    const oldInfoPanel = document.querySelector('#info-panel'); 
+    const newInfoPanel = oldInfoPanel.cloneNode(true); 
+    oldInfoPanel.parentNode.replaceChild(newInfoPanel, oldInfoPanel);
+    newInfoPanel.style.visibility = "unset"; 
+
+    const infoBtn = document.querySelector('#info-header');
+    const btnImg = document.querySelector('#info-header-img');
+    let isClicked = true;
+
+    infoBtn.addEventListener('click', () => {
+        if(isClicked){
+            isClicked = false; 
+            btnImg.src = collapseUp; 
+            showRouteInfo(route);
+        } else {
+            isClicked = true; 
+            btnImg.src = collapseDown; 
+            removePrev();  
+        }
+    }); 
+
+}
+
+function showRouteInfo(route){
+    const infoContent = document.querySelector('#info-content'); 
+
+    const list = document.createElement('div'); 
+    list.id = 'info-content-list'; 
+
+    const stopList = document.createElement('ul');
+
+    route = route.route; 
+
+    let destNode = false; 
+
+    function createMainNode(imgSrc, station){
+        const containerNode = document.createElement('div');
+        containerNode.className = 'info-main'
+        const icon = document.createElement('img'); 
+        const text = document.createElement('p'); 
+        icon.src = imgSrc; 
+
+        text.textContent = `${station}`; 
+        containerNode.appendChild(icon); 
+        containerNode.appendChild(text); 
+
+        return containerNode;
+    }
+
+    route.forEach((station, i) => {
+        if(i == 0){
+            const originNode = createMainNode(homeImg, station);
+            list.appendChild(originNode); 
+        } else if(route.length > 1 && i == route.length-1) {
+            destNode = createMainNode(destImg, station); 
+        } else {
+            const listItem = document.createElement('li'); 
+            listItem.textContent = `${station}`;
+            stopList.appendChild(listItem); 
+        }
+    })
+
+    list.appendChild(stopList); 
+    if(destNode) list.appendChild(destNode); 
+
+    infoContent.appendChild(list);
 }
 
 //get routes button 
@@ -259,10 +315,10 @@ submitBtn.addEventListener('click', () => {
 const sortSelected = document.querySelector('#sort-select');
 sortSelected.addEventListener('change', () => {
 
-    const output = document.getElementById("output");
+    const output = document.getElementById("output-results");
     const nodesArr = Array.from(output.children);
 
-    for (let node = 1; node < nodesArr.length; node++) {
+    for (let node = 0; node < nodesArr.length; node++) {
         output.removeChild(nodesArr[node]);
     }
 
