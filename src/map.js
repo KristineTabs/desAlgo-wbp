@@ -173,20 +173,32 @@ function plotRoute(route){
 }
 
 //get result 
+let routes; 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
-const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
-routes.forEach((route, i) => {
-    route.id = i+1; 
-}); 
-console.log(routes);
+
+async function getRoutes(){
+    await new Promise((resolve) => {
+        setTimeout(() => {
+            routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
+            routes.forEach((route, i) => {
+                route.id = i+1; 
+            });             
+            resolve(); 
+        }, 100)
+    })
+
+    document.getElementById('loading').style.display = 'none';
+
+    //display results 
+    displayRoutes (routes, sortInput);
+    
+}
+
+getRoutes(); 
 
 let currentRoute = null; 
 
-//display results 
 const routeOutput = document.querySelector('#output-results'); 
-displayRoutes (routes, sortInput);
-
-
 function createRouteNode(route, index){
     const distance = route.finalTotalDistance;
     const fair = route.finalTotalFair; 
