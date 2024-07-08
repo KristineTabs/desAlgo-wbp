@@ -444,6 +444,10 @@ main{
     align-items: center;
 }
 
+.transfer-dest .info-main{
+    margin: 0 1em 1em 1em;
+}
+
 .info-main img, .info-stats img{
     width: 1.5em; 
 }
@@ -464,6 +468,7 @@ main{
     gap: 1em; 
     margin: 0 1em 0 1em;
     padding-bottom: 1em;
+    border-spacing: 1em;
     border-bottom: dotted black 1px;
 }
 

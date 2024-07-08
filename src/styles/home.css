@@ -260,18 +260,17 @@ section p {
 
 #input input {
     background: transparent;
-    border: 1px solid #0e3e7c ; 
-    width: 80px;
-    height: 23px;
-    font-size: 16px;
+    border-radius: 1em; 
+    border: 1px solid #060641; 
+    width: fit-content;
+    font-size: smaller;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 #input input:hover {
-    background: #0e3e7c;
+    background: #060641;
     border-color: white;
     color: white;
-    cursor: pointer;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 900px) {
@@ -338,7 +337,17 @@ section p {
 }
 
 .station-select {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: 1em;
+}
+
+.station-select label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5em;
 }
 
 .station-select select {
@@ -365,4 +374,28 @@ section p {
     .station-select select option {
         font-size: 11px;
     }
+}
+
+.submit-select{
+    padding-top: 2em; 
+}
+
+.station-select select, .type-select select{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius: 1em;
+    height: 2em;
+}
+
+.station-select label p, .type-select label{
+    font-size: smaller;
+}
+
+#train-decor{
+    position: fixed;
+    width:20vw;
+    bottom: 0;
+    right: -1%;
+    filter:opacity(0.2);
+    transform: rotateY(180deg);
 }
