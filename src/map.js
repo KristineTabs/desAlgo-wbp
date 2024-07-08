@@ -3,6 +3,7 @@ import 'leaflet-polylinedecorator';
 import homePinImg from './assets/pin-map-origin.svg'
 import destPinImg from './assets/pin-map-dest.svg'
 import defPinImg from './assets/pin-map-stop.svg'
+import transPinImg from './assets/pin-map-transfer.svg'
 import homeImg from './assets/pin-origin.svg'
 import destImg from './assets/pin-destination.svg'
 
@@ -107,6 +108,12 @@ function plotRoute(route){
         popupAnchor: [1, -10]
     })
 
+    let transIcon = L.icon({
+        iconUrl: transPinImg,
+        iconSize: [15, 25], 
+        popupAnchor: [1, -10]
+    })
+
     route.forEach((station, i) => {
       for(let obj in stationData){
         if(obj == station){
@@ -118,7 +125,11 @@ function plotRoute(route){
             } else if(i == route.length - 1) {
                 marker =  L.marker([x,y], {icon: destIcon}).addTo(map).bindPopup(`Destination: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
             } else {
-                marker = L.marker([x,y], {icon: defIcon}).addTo(map).bindPopup(`${station}`, {closeOnClick: false, autoClose: false}); 
+                if(isTransfer(station, route[i-1]) == true){
+                    marker = L.marker([x,y], {icon: transIcon}).addTo(map).bindPopup(`Transfer: ${station}`, {closeOnClick: false, autoClose: false}); 
+                } else {
+                    marker = L.marker([x,y], {icon: defIcon}).addTo(map).bindPopup(`${station}`, {closeOnClick: false, autoClose: false}); 
+                }
             };
 
             //enable hover with click
@@ -212,7 +223,7 @@ function createRouteNode(route, index){
     nodeBtn.appendChild(routeInfo); 
 
     const routeTimeInfo = document.createElement('div'); 
-    routeInfo.className = 'route-info'; 
+    routeTimeInfo.className = 'route-info'; 
     const routeExtraText2 = document.createElement('p'); 
     routeExtraText2.textContent = 'approx.'; 
     const routeTime= document.createElement('p'); 
@@ -236,6 +247,14 @@ function createRouteNode(route, index){
         plotRoute(route);
         createInfoNode(route); 
     });
+}
+
+function isTransfer(currStation, prevStation){
+    if(!prevStation) return false;
+    let currLine = currStation.split('-')[0].trim();
+    let prevLine = prevStation.split('-')[0].trim();
+
+    return prevLine != currLine ? true : false; 
 }
 
 
@@ -299,15 +318,49 @@ function showRouteInfo(route){
         return containerNode;
     }
 
+    function createTransferNode(){
+        const transferLbl = document.createElement('div'); 
+        transferLbl.className = 'transfer-label'
+        const tLblIcon = document.createElement('img'); 
+        tLblIcon.src = transPinImg; 
+        const tLblText = document.createElement('p'); 
+        tLblText.textContent = 'System Exchange Point'
+        transferLbl.appendChild(tLblIcon); 
+        transferLbl.appendChild(tLblText); 
+        return transferLbl;
+    }
+
     route.forEach((station, i) => {
         if(i == 0){
             const originNode = createMainNode(homeImg, station);
             list.appendChild(originNode); 
+            
         } else if(route.length > 1 && i == route.length-1) {
             destNode = createMainNode(destImg, station); 
+            if(isTransfer(station, route[i-1])){
+                const itemContainer = document.createElement('div');
+                itemContainer.className = 'transfer-dest'
+                itemContainer.appendChild(createTransferNode()); 
+                itemContainer.appendChild(destNode);
+                destNode = itemContainer; 
+            }
+        
         } else {
             const listItem = document.createElement('li'); 
-            listItem.textContent = `${station}`;
+
+            if(isTransfer(station, route[i-1])){
+                const itemContainer = document.createElement('div');
+                itemContainer.className = 'transfer-route';
+
+                const stationLbl = document.createElement('p'); 
+                stationLbl.textContent = `${station}`; 
+        
+                itemContainer.appendChild(createTransferNode()); 
+                itemContainer.appendChild(stationLbl)
+                listItem.appendChild(itemContainer); 
+            } else {
+                listItem.textContent = `${station}`;
+            }
             stopList.appendChild(listItem); 
         }
     })

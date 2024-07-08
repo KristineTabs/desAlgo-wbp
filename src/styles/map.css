@@ -355,6 +355,28 @@ main{
     color: white;
 }
 
+.transfer-route{
+    display: flex;
+    flex-direction: column;
+}
+
+.transfer-label{
+    display: flex; 
+}
+.transfer-label p{
+    font-size: smaller; 
+    font-style: italic;
+    color: #00000086;
+}
+
+.transfer-label img{
+    width: 0.5em; 
+}
+
+.transfer-dest .transfer-label{
+    margin-left: 3em; 
+}
+
 @media only screen and (min-width: 800px) and (max-width: 900px) {
     .route-result {
         font-size: 14px;
