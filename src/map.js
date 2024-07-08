@@ -1,4 +1,4 @@
-import * as css from './styles/map.css'
+import './styles/map.css'
 import 'leaflet-polylinedecorator';
 import homePinImg from './assets/pin-map-origin.svg'
 import destPinImg from './assets/pin-map-dest.svg'
