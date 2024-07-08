@@ -162,8 +162,13 @@ function plotRoute(route){
 
 //get result 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
-const routes = findAllRoutes(originInput, destInput, typeInput, discountBool);
-console.log('No. Possible Routes: ' + routes.length);
+const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
+routes.forEach((route, i) => {
+    route.id = i+1; 
+}); 
+console.log(routes);
+
+let currentRoute = null; 
 
 //display results 
 const routeOutput = document.querySelector('#output-results'); 
@@ -175,9 +180,15 @@ function createRouteNode(route, index){
     const fair = route.finalTotalFair; 
     const travelTime = route.finalTravelTime; 
     const stationTrans = route.numStations; 
+    const routeId = route.id; 
 
     const nodeBtn = document.createElement('button'); 
     nodeBtn.className = 'route-result'; 
+    if(currentRoute == routeId){
+        nodeBtn.classList.add('route-selected');
+    } else {
+        nodeBtn.classList.add('route-unselected');
+    }
     nodeBtn.id = `route-${index}`;
 
     const routeName = document.createElement('p'); 
@@ -214,6 +225,14 @@ function createRouteNode(route, index){
     routeOutput.appendChild(nodeBtn); 
 
     nodeBtn.addEventListener('click', () => { 
+        //highlight chosen route
+        let selectedNode = document.querySelector('.route-selected'); 
+        if(selectedNode){
+            selectedNode.classList.remove('route-selected');
+            selectedNode.classList.add('route-unselected');
+        }
+        nodeBtn.classList.add('route-selected');
+        currentRoute = routeId; 
         plotRoute(route);
         createInfoNode(route); 
     });

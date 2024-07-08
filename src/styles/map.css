@@ -185,14 +185,14 @@ main{
 .routes-btn{
     background: transparent;
     border-radius: 1em; 
-    border: 1px solid #0e3e7c ; 
+    border: 1px solid #060641; 
     width: fit-content;
     font-size: 1em;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 .routes-btn:hover{
-    background: #0e3e7c;
+    background: #060641;
     border-color: white;
     color: white;
 }
@@ -309,29 +309,28 @@ main{
 }
 
 .route-result{
-    background-color: transparent;
     font-size: medium;
     border: none;
     display: flex;
     flex-direction: column;
     padding: 0.5em;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    height: 100%;
+    height: fit-content;
 }
 
 .route-result:hover{
-    background-color: #0e3e7c;
-    color: white;
+    background-color: #06064124;
+    color: black;
 }
 
 .route-name{
     font-size: smaller;
     font-style: italic;
-    color:rgba(0, 0, 0, 0.527);
+    color:#00000086;
 }
 
 .route-result:hover .route-name{
-    color: white;
+    color: black;
 }
 
 .route-info{
@@ -341,6 +340,19 @@ main{
 
 .route-price, .route-transfers, .route-time{
     font-weight: bold;
+}
+
+.route-unselected{
+    background-color: transparent;
+}
+
+.route-selected{
+    background-color: #060641; 
+    color: white;  
+}
+
+.route-selected .route-name{
+    color: white;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 900px) {
@@ -426,8 +438,6 @@ main{
 }
 
 
-
-
 #map {
     display: flex;
     flex-direction: column;
@@ -452,7 +462,7 @@ main{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #0e3e7c; 
+    background: #060641; 
   }
   
   /* Handle on hover */
