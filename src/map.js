@@ -346,3 +346,20 @@ function displayRoutes (paths, sortType) {
         createRouteNode(route, i); 
     });
 } 
+
+//sort swap
+const sortSwapBtn = document.querySelector('#sort-swap');
+sortSwapBtn.addEventListener('click', () => {
+    const output = document.getElementById("output-results");
+    const routeNodes = Array.from(output.children); 
+    console.log(routeNodes)
+    for (let i = 0; i < Math.floor((routeNodes.length)/2); i++){
+        const curr = routeNodes[i]; 
+        const target = routeNodes[routeNodes.length-1-i]
+        
+        const currSibling = curr.nextSibling; 
+        const targetSibling = target.nextSibling; 
+        output.insertBefore(curr, targetSibling); 
+        output.insertBefore(target, currSibling); 
+    }
+})
