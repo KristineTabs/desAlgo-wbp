@@ -128,10 +128,22 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
     };
 
     //executes dfs algorithm to find all possible paths from origin station to destination station 
-    function implementDFS(currStation, destination, route, visited, allRoutes, finalTotalDistance, subPathDistance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, rideType, isDiscounted) {
+    function implementDFS(currStation, destination, route, visited, allRoutes, finalTotalDistance, subPathDistance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, rideType, isDiscounted, oldBound, newBound, tempFair) {
        
         route.push(currStation); //places the current visited station in the current route
         visited.add(currStation);
+
+        if (fareMatrix[currStation]['systemLine'] === 'EDSA Carousel') {
+
+            fareMatrix[prevStation]['stopOrder'] <= fareMatrix[currStation]['stopOrder']? newBound = 0 : newBound = 1;
+
+            if (oldBound !== newBound) {
+                currTotalFare += tempFair;
+                firstStation = prevStation;
+            }
+            oldBound = newBound;
+            tempFair = 0;
+        }
 
         let firstFair, secondFair;
         
@@ -209,8 +221,15 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
 
             for (const [adjacentStation, distance, travelTime] of graph[currStation]) { //checks unvisited adjacent stations from the current station
 
+                if (fareMatrix[currStation][adjacentStation]) {
+                    tempFair = fareMatrix[currStation][adjacentStation][0];
+                }
+                else if (fareMatrix[adjacentStation][currStation]){
+                    tempFair = fareMatrix[adjacentStation][currStation][0];
+                }
+
                 if (!visited.has(adjacentStation)) { //if the adjacent station is not yet visited, we visit deeper into the path
-                    implementDFS(adjacentStation, destination, route, visited, allRoutes, finalTotalDistance + distance, subPathDistance + distance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, rideType, isDiscounted);
+                    implementDFS(adjacentStation, destination, route, visited, allRoutes, finalTotalDistance + distance, subPathDistance + distance, currTotalFare, currTravelTime, routeTransfer, firstStation, prevStation, rideType, isDiscounted, oldBound, newBound, tempFair);
                 }
             }
         }
@@ -223,7 +242,7 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
     let firstStation = origin;
     let prevStation = origin;
 
-    implementDFS(origin, destination, [], new Set(), allRoutes, 0, 0, 0, 0, 0, firstStation, prevStation, typeOfRide, discount);
+    implementDFS(origin, destination, [], new Set(), allRoutes, 0, 0, 0, 0, 0, firstStation, prevStation, typeOfRide, discount, 0, 0, 0);
     
     return allRoutes;
 }
