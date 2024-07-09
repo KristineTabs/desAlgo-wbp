@@ -132,7 +132,6 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
        
         route.push(currStation); //places the current visited station in the current route
         visited.add(currStation);
-        console.log("Visited: " + currStation);
 
         let firstFair, secondFair;
         
