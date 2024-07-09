@@ -452,7 +452,7 @@ function displayRoutes (paths, sortType) {
     });
 
     paths.forEach((route, i) => {
-        console.log(route); 
+        
         createRouteNode(route, i); 
     });
 } 
@@ -462,7 +462,7 @@ const sortSwapBtn = document.querySelector('#sort-swap');
 sortSwapBtn.addEventListener('click', () => {
     const output = document.getElementById("output-results");
     const routeNodes = Array.from(output.children); 
-    console.log(routeNodes)
+    
     for (let i = 0; i < Math.floor((routeNodes.length)/2); i++){
         const curr = routeNodes[i]; 
         const target = routeNodes[routeNodes.length-1-i]
