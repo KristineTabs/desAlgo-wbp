@@ -14,12 +14,12 @@ BiyaHero is a web application which performs Depth First Search to get all route
 - Route information panel 
 
 ## Built With 
-JavaScript / HTML / CSS 
-Webpack 
-LeafletJS 
-Leaflet Polyline Decorator
-OpenStreetMap 
-Google Icons, Font Awesome Icons, The Noun Project Icons
+- JavaScript / HTML / CSS 
+- Webpack 
+- LeafletJS 
+- Leaflet Polyline Decorator
+- OpenStreetMap 
+- Google Icons, Font Awesome Icons, The Noun Project Icons
 
 ## Installation 
 1. Download the **desAlgo-wbp-main.zip** in the Gdrive folder and unzip it.
@@ -29,12 +29,14 @@ Google Icons, Font Awesome Icons, The Noun Project Icons
 4. After installation, build and run the project using the commands: 
     - **npm run build**
     - **npm run dev**
-    If the project does not automatically open in your browser, look for 
+    - If the project does not automatically open in your browser, look for 
     "[webpack-dev-server] Project is running at: 
      [webpack-dev-server] Loopback: http://localhost:____/" 
     in your terminal and go to the specified link
 
      ![Alt text](/docs/docs-terminal.png)
+
+5. You can also visit the repository at https://github.com/jellyM0on/desAlgo-wbp to clone the repo and do steps 2-4 to run the project.
 
 ## Notes
 Not mobile-compatible yet
