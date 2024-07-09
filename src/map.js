@@ -50,6 +50,17 @@ let destInput = getURLParams('destination');
 let typeInput = getURLParams('type');
 let sortInput = getURLParams('sort');
 
+//validate inputs 
+function validateInputs(origin, destination, type){
+    let types = ['single', 'beep', 'discount']
+    if(!stationData[origin] || !stationData[destination] || !types.includes(type)){
+        alert("Invalid inputs! Please select from the given dropdowns. You will be redirected to the Home Page. Click OK to continue.")
+        window.location.href = '/'
+    }
+}
+
+validateInputs(originInput, destInput, typeInput); 
+
 //to set price as default value for first load
 if (!sortInput) {
     sortInput = 'price';
@@ -127,7 +138,7 @@ function plotRoute(route){
                 marker =  L.marker([x,y], {icon: destIcon}).addTo(map).bindPopup(`Destination: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
             } else {
                 if(isTransfer(station, route[i-1]) == true){
-                    marker = L.marker([x,y], {icon: transIcon}).addTo(map).bindPopup(`Transfer: ${station}`, {closeOnClick: false, autoClose: false}); 
+                    marker = L.marker([x,y], {icon: transIcon}).addTo(map).bindPopup(`Exchange: ${station}`, {closeOnClick: false, autoClose: false}); 
                 } else {
                     marker = L.marker([x,y], {icon: defIcon}).addTo(map).bindPopup(`${station}`, {closeOnClick: false, autoClose: false}); 
                 }
