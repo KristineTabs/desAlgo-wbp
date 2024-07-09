@@ -133,7 +133,7 @@ function findAllRoutes(origin, destination, typeOfRide, discount) {
         route.push(currStation); //places the current visited station in the current route
         visited.add(currStation);
 
-        if (fareMatrix[currStation]['systemLine'] === 'EDSA Carousel') {
+        if (fareMatrix[prevStation]['systemLine'] === 'EDSA Carousel' && fareMatrix[currStation]['systemLine'] === 'EDSA Carousel') {
 
             fareMatrix[prevStation]['stopOrder'] <= fareMatrix[currStation]['stopOrder']? newBound = 0 : newBound = 1;
 
