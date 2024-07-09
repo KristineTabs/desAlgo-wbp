@@ -1,10 +1,12 @@
-import * as css from './styles/map.css'
+import './styles/map.css'
 import 'leaflet-polylinedecorator';
 import homePinImg from './assets/pin-map-origin.svg'
 import destPinImg from './assets/pin-map-dest.svg'
 import defPinImg from './assets/pin-map-stop.svg'
+import transPinImg from './assets/pin-map-transfer.svg'
 import homeImg from './assets/pin-origin.svg'
 import destImg from './assets/pin-destination.svg'
+import infoImg from './assets/info.svg'
 
 import collapseUp from './assets/collapse-up.svg'
 import collapseDown from './assets/collapse-down.svg'
@@ -107,6 +109,12 @@ function plotRoute(route){
         popupAnchor: [1, -10]
     })
 
+    let transIcon = L.icon({
+        iconUrl: transPinImg,
+        iconSize: [15, 25], 
+        popupAnchor: [1, -10]
+    })
+
     route.forEach((station, i) => {
       for(let obj in stationData){
         if(obj == station){
@@ -118,7 +126,11 @@ function plotRoute(route){
             } else if(i == route.length - 1) {
                 marker =  L.marker([x,y], {icon: destIcon}).addTo(map).bindPopup(`Destination: ${station}`, {closeOnClick: false, autoClose: false}).openPopup();
             } else {
-                marker = L.marker([x,y], {icon: defIcon}).addTo(map).bindPopup(`${station}`, {closeOnClick: false, autoClose: false}); 
+                if(isTransfer(station, route[i-1]) == true){
+                    marker = L.marker([x,y], {icon: transIcon}).addTo(map).bindPopup(`Transfer: ${station}`, {closeOnClick: false, autoClose: false}); 
+                } else {
+                    marker = L.marker([x,y], {icon: defIcon}).addTo(map).bindPopup(`${station}`, {closeOnClick: false, autoClose: false}); 
+                }
             };
 
             //enable hover with click
@@ -161,20 +173,32 @@ function plotRoute(route){
 }
 
 //get result 
+let routes; 
 const discountBool = typeInput == 'discount' ? 1 : 0; 
-const routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
-routes.forEach((route, i) => {
-    route.id = i+1; 
-}); 
-console.log(routes);
+
+async function getRoutes(){
+    await new Promise((resolve) => {
+        setTimeout(() => {
+            routes = findAllRoutes(originInput, destInput, typeInput, discountBool); 
+            routes.forEach((route, i) => {
+                route.id = i+1; 
+            });             
+            resolve(); 
+        }, 100)
+    })
+
+    document.getElementById('loading').style.display = 'none';
+
+    //display results 
+    displayRoutes (routes, sortInput);
+    
+}
+
+getRoutes(); 
 
 let currentRoute = null; 
 
-//display results 
 const routeOutput = document.querySelector('#output-results'); 
-displayRoutes (routes, sortInput);
-
-
 function createRouteNode(route, index){
     const distance = route.finalTotalDistance;
     const fair = route.finalTotalFair; 
@@ -212,12 +236,12 @@ function createRouteNode(route, index){
     nodeBtn.appendChild(routeInfo); 
 
     const routeTimeInfo = document.createElement('div'); 
-    routeInfo.className = 'route-info'; 
+    routeTimeInfo.className = 'route-info'; 
     const routeExtraText2 = document.createElement('p'); 
     routeExtraText2.textContent = 'approx.'; 
     const routeTime= document.createElement('p'); 
     routeTime.className = 'route-time';
-    routeTime.textContent = `${travelTime} minutes`
+    routeTime.textContent = formatTime(travelTime); 
     routeTimeInfo.appendChild(routeExtraText2);
     routeTimeInfo.appendChild(routeTime); 
     nodeBtn.appendChild(routeTimeInfo); 
@@ -238,7 +262,16 @@ function createRouteNode(route, index){
     });
 }
 
+//helper function to determine if a station is an exchange station. dependent on station names
+function isTransfer(currStation, prevStation){
+    if(!prevStation) return false;
+    let currLine = currStation.split('-')[0].trim();
+    let prevLine = prevStation.split('-')[0].trim();
 
+    return prevLine != currLine ? true : false; 
+}
+
+//route information panel button
 function createInfoNode(route){
 
     function removePrev(){
@@ -270,21 +303,42 @@ function createInfoNode(route){
             removePrev();  
         }
     }); 
-
 }
 
+//helper function to format time
+function formatTime(travelTime) {
+    if (travelTime < 60) {
+      return `${travelTime} minutes`;
+    } else if (travelTime % 60 !== 0) {
+      return `${Math.floor(travelTime / 60)} hour/s and ${travelTime % 60} minute/s`;
+    } else {
+      return `${Math.floor(travelTime / 60)} hour/s`;
+    }
+  }
+
+//route information panel 
 function showRouteInfo(route){
     const infoContent = document.querySelector('#info-content'); 
 
     const list = document.createElement('div'); 
     list.id = 'info-content-list'; 
 
+    const statsContainer = document.createElement('div'); 
+    statsContainer.className = 'info-stats'; 
+    const statsIcon = document.createElement('img'); 
+    statsIcon.src = infoImg; 
+    const statsContent = document.createElement('p'); 
+    statsContent.innerText= `Php ${route.finalTotalFair}\n${formatTime(route.finalTravelTime)}\n${route.numStations} Transfers | ${route.finalTotalDistance} km`; 
+    statsContainer.appendChild(statsIcon); 
+    statsContainer.appendChild(statsContent); 
+    list.appendChild(statsContainer);
+
     const stopList = document.createElement('ul');
 
     route = route.route; 
-
     let destNode = false; 
 
+    //create label nodes for origin and destination stations
     function createMainNode(imgSrc, station){
         const containerNode = document.createElement('div');
         containerNode.className = 'info-main'
@@ -299,15 +353,51 @@ function showRouteInfo(route){
         return containerNode;
     }
 
+    //create label nodes for station exchange nodes
+    function createTransferNode(){
+        const transferLbl = document.createElement('div'); 
+        transferLbl.className = 'transfer-label'
+        const tLblIcon = document.createElement('img'); 
+        tLblIcon.src = transPinImg; 
+        const tLblText = document.createElement('p'); 
+        tLblText.textContent = 'System Exchange Point'
+        transferLbl.appendChild(tLblIcon); 
+        transferLbl.appendChild(tLblText); 
+        return transferLbl;
+    }
+
     route.forEach((station, i) => {
+        //if origin station
         if(i == 0){
             const originNode = createMainNode(homeImg, station);
             list.appendChild(originNode); 
+        //if destination station
         } else if(route.length > 1 && i == route.length-1) {
             destNode = createMainNode(destImg, station); 
+            if(isTransfer(station, route[i-1])){
+                const itemContainer = document.createElement('div');
+                itemContainer.className = 'transfer-dest'
+                itemContainer.appendChild(createTransferNode()); 
+                itemContainer.appendChild(destNode);
+                destNode = itemContainer; 
+            }
+        //if stop station
         } else {
             const listItem = document.createElement('li'); 
-            listItem.textContent = `${station}`;
+            //if stop station is a transfer station
+            if(isTransfer(station, route[i-1])){
+                const itemContainer = document.createElement('div');
+                itemContainer.className = 'transfer-route';
+
+                const stationLbl = document.createElement('p'); 
+                stationLbl.textContent = `${station}`; 
+        
+                itemContainer.appendChild(createTransferNode()); 
+                itemContainer.appendChild(stationLbl)
+                listItem.appendChild(itemContainer); 
+            } else {
+                listItem.textContent = `${station}`;
+            }
             stopList.appendChild(listItem); 
         }
     })

@@ -1,4 +1,4 @@
-import * as css from './styles/home.css';
+import './styles/home.css';
 import stationData from './assets/stationData.json';
 
 //generate select options

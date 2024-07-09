@@ -14,6 +14,42 @@ body{
     font-family: sans-serif;
 }
 
+#loading{
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    width: 100vw;
+    height: 100vh; 
+    background-color: white;
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* from  https://css-loaders.com/*/
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    background:linear-gradient(90deg,#060641 50%,#0000 0) right/200% 100%;
+    animation: l21 2s infinite linear;
+  }
+  .loader::before {
+    content :"Loading...";
+    color: #0000;
+    padding: 0 5px;
+    background: inherit;
+    background-image: linear-gradient(90deg,#fff 50%,#060641 0);
+    -webkit-background-clip:text;
+            background-clip:text;
+  }
+  
+  @keyframes l21{
+    100%{background-position: left}
+  }
+
 header{
     height: 5em; 
     display: flex;
@@ -355,6 +391,28 @@ main{
     color: white;
 }
 
+.transfer-route{
+    display: flex;
+    flex-direction: column;
+}
+
+.transfer-label{
+    display: flex; 
+}
+.transfer-label p{
+    font-size: smaller; 
+    font-style: italic;
+    color: #00000086;
+}
+
+.transfer-label img{
+    width: 0.5em; 
+}
+
+.transfer-dest .transfer-label{
+    margin-left: 3em; 
+}
+
 @media only screen and (min-width: 800px) and (max-width: 900px) {
     .route-result {
         font-size: 14px;
@@ -416,13 +474,17 @@ main{
 }
 
 .info-main{
-    margin: 0 1em 1em 1em;
+    margin: 1em;
     display: flex; 
     gap: 0.5em; 
     align-items: center;
 }
 
-.info-main img{
+.transfer-dest .info-main{
+    margin: 0 1em 1em 1em;
+}
+
+.info-main img, .info-stats img{
     width: 1.5em; 
 }
 
@@ -435,6 +497,15 @@ main{
 
 #info-content li{
     margin-bottom: 0.5em;
+}
+
+.info-stats{
+    display: flex; 
+    gap: 1em; 
+    margin: 0 1em 0 1em;
+    padding-bottom: 1em;
+    border-spacing: 1em;
+    border-bottom: dotted black 1px;
 }
 
 

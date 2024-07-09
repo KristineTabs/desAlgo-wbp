@@ -1,6 +1,6 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const historyApiFallback = require('connect-history-api-fallback')
 
 module.exports = {
     mode: 'development',
@@ -28,7 +28,8 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                include: /src/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             }, 
             {
                 test: /\.(png|svg|jpg|jpeg)$/i,
@@ -46,17 +47,18 @@ module.exports = {
             filename: 'index.html',
             template: 'src/home.html',
             chunks: ['index'], 
-            inject: true
+            inject: 'head'
         }), 
         new HtmlWebpackPlugin({
             title: 'Map',
             filename: 'map.html',
             template: 'src/map.html', 
             chunks: ['map'],
-            inject: true
-
-
-        })
+            inject: 'head'
+        }), 
+        new MiniCssExtractPlugin({
+            filename: '[name].css', 
+        }), 
     ]
 }
 
