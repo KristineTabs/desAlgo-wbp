@@ -22,16 +22,19 @@ OpenStreetMap
 Google Icons, Font Awesome Icons, The Noun Project Icons
 
 ## Installation 
-1. Clone the repo 
-2. Install NPM Packages 
-    - npm install 
-3. Build and run
-    - npm run build
-    - npm run dev 
+1. Download the **desAlgo-wbp-main.zip** in the Gdrive folder and unzip it.
+2. Open your code editor/IDE of choice and open in it, the folder **desAlgo-wbp-main** located in the directory where you unzipped the zip file. 
+3. Open your code editor's terminal and install NPM Packages using the command: 
+    - **npm install** 
+4. After installation, build and run the project using the commands: 
+    - **npm run build**
+    - **npm run dev**
     If the project does not automatically open in your browser, look for 
     "[webpack-dev-server] Project is running at: 
      [webpack-dev-server] Loopback: http://localhost:____/" 
     in your terminal and go to the specified link
+
+     ![Alt text](/docs/docs-terminal.png)
 
 ## Notes
 Not mobile-compatible yet
